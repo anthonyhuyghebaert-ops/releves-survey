@@ -124,7 +124,7 @@ var DATA = /*__DATA__*/{"format":"fiche-survey","schema":1,"moteur":7,"exporteLe
 /* validation finale : tout doit \u00eatre renseign\u00e9 ou justifi\u00e9. \u00ab ?essai=1 \u00bb dans l'adresse l\u00e8ve le blocage (essais du charg\u00e9 de projet). */
 var OBLIGATOIRE = !/[?&]essai=1/.test(location.search);
 /* adresse de r\u00e9ception des relev\u00e9s (script Google du p\u00f4le projets) ; vide = partage par le t\u00e9l\u00e9phone */
-var ENVOI = '';
+var ENVOI = 'https://script.google.com/macros/s/AKfycby0lxu9_bdnpyjh0TkxSbrsYgnDOs2fVj6huhQYc-7RsZeQdNiI9qnjr1YVTUN3kYj-zg/exec';
 var app = document.getElementById('app');
 if (!DATA || DATA.format !== 'fiche-survey') { app.innerHTML = '<h1>Fiche <em>introuvable.</em></h1><p>Cette page ne contient pas de fiche. Demande un nouveau lien \u00e0 ton charg\u00e9 de projet.</p>'; document.querySelector('.bar').hidden = true; return; }
 
