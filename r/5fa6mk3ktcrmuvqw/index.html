@@ -75,6 +75,12 @@ input:focus,textarea:focus,button:focus-visible{outline:3px solid var(--or);outl
 .lst li{border-bottom:1px solid var(--line)}.lst li:last-child{border-bottom:0}
 .lst button{display:flex;align-items:center;gap:10px;width:100%;min-height:54px;padding:8px 2px;border:0;background:transparent;text-align:left;cursor:pointer}
 .lst .lb{flex:1;min-width:0}
+.lst .rw{display:flex;align-items:center;gap:10px;min-height:54px;padding:8px 2px}
+.lst .st.lt{color:var(--or);font-weight:700}
+.big input:focus{outline:0}.big:focus-within{box-shadow:0 0 0 3px var(--or)}
+.big .okb{border:0;background:var(--or);color:#fff;font-weight:800;font-size:20px;padding:0 18px;min-width:76px;cursor:pointer;font-family:inherit}
+.plan{display:block;width:100%;height:auto;background:#EFEBE5}
+.zl button{min-height:68px}.zl .lb b{display:block;font-size:17px}.zl .lb small{display:block;color:var(--gray);font-size:14px}
 .lst .st{font-size:14px;color:var(--gray);white-space:nowrap}
 .lst .st.ok{color:var(--ok);font-weight:700}
 .shot{width:100%;max-height:46vh;object-fit:contain;background:var(--mist);border:1px solid var(--line);display:block;margin:10px 0}
@@ -196,6 +202,7 @@ function stText(e) {
 var wideMQ = window.matchMedia('(min-width: 900px)'), WIDE = wideMQ.matches, STEPS = [], cur = 0, selId = null;
 function buildSteps() {
   STEPS = [{ t: 'intro' }];
+  if (!WIDE) STEPS.push({ t: 'start' });
   DATA.zones.forEach(function (z) {
     STEPS.push({ t: 'zone', z: z });
     if (!WIDE) { z.elements.forEach(function (e) { STEPS.push({ t: 'el', z: z, e: e }); }); STEPS.push({ t: 'rem', z: z }); }
@@ -260,6 +267,17 @@ function svgView(ph, crop, els, focusId, clickable, alt) {
   f.forEach(function (e) { h += mark(e, u, true, false); });
   return h + '</svg><div class="zb"><button type="button" data-zm="out" aria-label="D\u00e9zoomer"' + (zoomed ? '' : ' disabled') + '>\u2212</button><button type="button" data-zm="in" aria-label="Zoomer">+</button><button type="button" data-zm="fit"' + (zoomed ? '' : ' disabled') + '>Tout voir</button></div></div>';
 }
+function planView(ph) {
+  var zs = []; DATA.zones.forEach(function (z) { (z.vues || []).forEach(function (v) { if (v.photo === ph.id) zs.push({ z: z, v: v }); }); });
+  if (!zs.length) return '';
+  var u = ph.w / 380, h = '<div class="views"><div><span class="vlab">' + esc(ph.libelle) + '</span><svg class="plan" viewBox="0 0 ' + ph.w + ' ' + ph.h + '" role="img" aria-label="Photo ' + esc(ph.libelle) + ' avec ses zones" xmlns="http://www.w3.org/2000/svg"><image href="' + ph.image + '" x="0" y="0" width="' + ph.w + '" height="' + ph.h + '" preserveAspectRatio="none"/>';
+  zs.forEach(function (o) {
+    var v = o.v, ok = zoneCount(o.z) === o.z.elements.length, col = ok ? '#1B7F3B' : '#0F0D0C', lw = 30 * u, lh = 20 * u;
+    h += '<g data-zone="' + esc(o.z.id) + '" style="cursor:pointer"><rect x="' + v.x + '" y="' + v.y + '" width="' + v.w + '" height="' + v.h + '" fill="rgba(255,255,255,.01)" stroke="#fff" stroke-width="' + 4.5 * u + '"/><rect x="' + v.x + '" y="' + v.y + '" width="' + v.w + '" height="' + v.h + '" fill="none" stroke="' + col + '" stroke-width="' + 2.2 * u + '"/>';
+    h += '<rect x="' + v.x + '" y="' + Math.max(0, v.y - lh) + '" width="' + lw + '" height="' + lh + '" fill="' + col + '"/><text x="' + (v.x + lw / 2) + '" y="' + (Math.max(0, v.y - lh) + lh * 0.72) + '" text-anchor="middle" font-size="' + 12 * u + '" font-weight="700" fill="#fff" font-family="Arial,sans-serif">' + esc(o.z.code) + '</text></g>';
+  });
+  return h + '</svg></div></div>';
+}
 function zoneViews(z, focusId, clickable) {
   var h = '<div class="views">';
   z.vues.forEach(function (v) {
@@ -273,9 +291,9 @@ function zoneViews(z, focusId, clickable) {
 function elView(e) {
   var ph = PHOTOS[e.photo]; if (!ph) return '';
   var b = bbox(e), size = Math.max(b[2] - b[0], b[3] - b[1]), pad = Math.max(size * 0.7, 0.14 * ph.w), crop = cropFor(ph, b, pad, 4 / 3);
-  /* tous les rep\u00e8res de la photo, y compris ceux des autres zones : on passe de l'un \u00e0 l'autre sans ordre impos\u00e9 */
-  var els = ALL.filter(function (x) { return x.photo === e.photo; });
-  return '<div class="views"><div><span class="vlab">' + esc(ph.libelle) + '</span>' + svgView(ph, crop, els, e.id, true, 'Photo recadr\u00e9e sur ' + e.ref + '. Touche un autre rep\u00e8re pour y aller.') + '</div></div>';
+  /* les rep\u00e8res de la zone en cours ; sur t\u00e9l\u00e9phone ils ne sont pas cliquables : le tunnel donne l'ordre */
+  var els = ALL.filter(function (x) { return x.photo === e.photo && (!e.zone || x.zone === e.zone); });
+  return '<div class="views"><div><span class="vlab">' + esc(ph.libelle) + '</span>' + svgView(ph, crop, els, e.id, WIDE, 'Photo recadr\u00e9e sur ' + e.ref + '.') + '</div></div>';
 }
 
 /* ---------- champs ---------- */
@@ -283,7 +301,7 @@ var RAISONS = ['Inaccessible', 'Masqu\u00e9', 'Nacelle n\u00e9cessaire', 'Autre'
 function field(e) {
   var r = rep(e.id), id = esc(e.id), h = '';
   if (e.genre === 'cote') {
-    h += '<div class="big"><input id="v-' + id + '" aria-label="' + esc(e.libelle) + ', en ' + esc(e.unite || U) + '" type="text" inputmode="decimal" autocomplete="off" placeholder="\u2014" data-f="' + id + ':v" value="' + esc(r.v == null ? '' : r.v) + '"' + (r.nm ? ' disabled' : '') + '><span>' + esc(e.unite || U) + '</span></div>';
+    h += '<div class="big"><input id="v-' + id + '" aria-label="' + esc(e.libelle) + ', en ' + esc(e.unite || U) + '" type="text" inputmode="decimal" autocomplete="off" placeholder="\u2014" data-f="' + id + ':v" value="' + esc(r.v == null ? '' : r.v) + '"' + (r.nm ? ' disabled' : '') + ' enterkeyhint="done"><span>' + esc(e.unite || U) + '</span>' + (WIDE ? '' : '<button type="button" class="okb" data-ok="1">OK</button>') + '</div>';
     h += '<div class="row"><button type="button" class="btn sm" data-t="' + id + ':nm" aria-pressed="' + (r.nm ? 'true' : 'false') + '">Cote non mesurable</button></div>';
     if (r.nm) h += reason(e, r);
     if (!WIDE) h += '<label class="f" for="n-' + id + '">Remarque (facultatif)</label><input id="n-' + id + '" type="text" data-f="' + id + ':n" value="' + esc(r.n || '') + '">';
@@ -322,8 +340,9 @@ function title(e) {
 function tick() {
   var d = ALL.filter(isDone).length;
   document.getElementById('prog').style.width = Math.round(100 * d / Math.max(1, ALL.length)) + '%';
-  document.getElementById('cnt').textContent = d + ' / ' + ALL.length + ' renseign\u00e9s' + (WIDE ? '' : ' \u00b7 \u00e9cran ' + (cur + 1) + ' / ' + STEPS.length);
-  document.getElementById('b-plan').textContent = 'Plan';
+  var lt = WIDE ? 0 : ALL.filter(isLater).length;
+  document.getElementById('cnt').textContent = d + ' / ' + ALL.length + ' renseign\u00e9s' + (lt ? ' \u00b7 \u00e0 reprendre : ' + lt : '');
+  document.getElementById('b-plan').textContent = WIDE ? 'Plan' : 'Zones';
   var nav = document.getElementById('nav'); nav.hidden = !WIDE; if (!WIDE) return;
   var h = '';
   STEPS.forEach(function (s, i) {
@@ -353,6 +372,18 @@ function render(keepScroll) {
     h += '<h2>Poseur</h2><label class="f" for="po-nom">Nom</label><input id="po-nom" type="text" autocomplete="name" data-po="nom" value="' + esc(R.poseur.nom) + '">';
     h += '<label class="f" for="po-email">E-mail</label><input id="po-email" type="email" autocomplete="email" inputmode="email" data-po="email" value="' + esc(R.poseur.email) + '">';
     h += '<label class="f" for="po-tel">T\u00e9l\u00e9phone</label><input id="po-tel" type="tel" autocomplete="tel" data-po="tel" value="' + esc(R.poseur.tel) + '">';
+  } else if (s.t === 'start') {
+    var left = ALL.filter(function (e) { return !isDone(e); }).length;
+    h += '<p class="eyebrow">' + (left === ALL.length ? 'D\u00e9part' : 'Zones du relev\u00e9') + '</p><h1>Par o\u00f9<br><em>' + (left === ALL.length ? 'commences-tu ?' : 'continues-tu ?') + '</em></h1>';
+    h += '<p class="do">Choisis l\u2019endroit o\u00f9 tu es. On te donne tout ce qu\u2019il y a \u00e0 relever l\u00e0, point par point, puis la zone la plus proche.</p>';
+    DATA.photos.forEach(function (ph) { h += planView(ph); });
+    h += '<ul class="lst zl">';
+    DATA.zones.forEach(function (zn) {
+      var dn = zoneCount(zn), ok = dn === zn.elements.length, ltz = laterIn(zn).length;
+      h += '<li><button type="button" data-zone="' + esc(zn.id) + '"><span class="code' + (ok ? ' done' : '') + '" style="border-radius:0;background:' + (ok ? '' : '#0F0D0C') + '">' + esc(zn.code) + '</span><span class="lb"><b>' + esc(zn.titre) + '</b><small>' + esc(zoneSum(zn)) + '</small></span><span class="st' + (ok ? ' ok' : ltz ? ' lt' : '') + '">' + (ok ? 'fait' : dn + ' / ' + zn.elements.length + (ltz ? ' \u00b7 ' + ltz + ' \u00e0 reprendre' : '')) + '</span></button></li>';
+    });
+    if (DATA.cablageGeneral) h += '<li><button type="button" data-go="' + esc(DATA.cablageGeneral.id) + '">' + pill(DATA.cablageGeneral) + '<span class="lb"><b>C\u00e2blage et arriv\u00e9es \u00e9lectriques</b><small>toute la fiche</small></span><span class="st">' + esc(stText(DATA.cablageGeneral)) + '</span></button></li>';
+    h += '<li><button type="button" data-fin="1"><span class="lb"><b>Validation finale et envoi</b><small>' + (left ? left + ' point' + (left > 1 ? 's' : '') + ' encore \u00e0 renseigner' : 'tout est renseign\u00e9') + '</small></span><span class="st">\u2192</span></button></li></ul>';
   } else if (s.t === 'zone') {
     var z = s.z, d = zoneCount(z);
     h += '<p class="eyebrow">Zone ' + z.numero + ' sur ' + DATA.zones.length + ' \u00b7 ' + d + ' / ' + z.elements.length + ' faits</p><h1>' + esc(z.code) + '<br><em>' + esc(z.titre) + '.</em></h1>';
@@ -361,19 +392,24 @@ function render(keepScroll) {
       z.elements.forEach(function (e) { h += '<section class="card' + (isDone(e) ? ' ok' : '') + (selId === e.id ? ' sel' : '') + '" id="card-' + esc(e.id) + '" data-card="' + esc(e.id) + '"' + (e.genre === 'cote' ? '' : ' style="grid-column:1/-1"') + '><h3>' + pill(e) + '<span>' + title(e) + '</span></h3>' + field(e) + '</section>'; });
       h += '<section class="card opt" style="grid-column:1/-1"><h3>Remarque sur la zone</h3><textarea aria-label="Remarque sur la zone ' + esc(z.code) + '" data-zr="' + esc(z.id) + '">' + esc((R.zones[z.id] || {}).r || '') + '</textarea></section></div></div>';
     } else {
-      h += zoneViews(z, null, true) + '<p class="hint">Touche un rep\u00e8re sur la photo ou une ligne de la liste, dans l\u2019ordre que tu veux. \u00ab Suivant \u00bb t\u2019emm\u00e8ne au point \u00e0 faire le plus proche. Les points faits s\u2019effacent sur la photo. Pince ou utilise + / \u2212 pour zoomer.</p><ul class="lst">';
-      z.elements.forEach(function (e) { var st = status(e); h += '<li><button type="button" data-go="' + esc(e.id) + '">' + pill(e) + '<span class="lb">' + title(e) + '</span><span class="st' + (st === 'done' ? ' ok' : '') + '">' + esc(stText(e)) + '</span></button></li>'; });
+      h += zoneViews(z, null, false) + '<p class="do">' + esc(zoneSum(z)) + '.</p><p class="hint">On te guide point par point, du plus proche au plus proche. Un point que tu ne peux pas faire tout de suite ? \u00ab Plus tard \u00bb le met de c\u00f4t\u00e9 : il revient avant l\u2019envoi. Pince ou utilise + / \u2212 pour zoomer.</p><ul class="lst">';
+      z.elements.forEach(function (e) {
+        var st = status(e), dn = isDone(e), lt = isLater(e), inner = pill(e) + '<span class="lb">' + title(e) + '</span><span class="st' + (st === 'done' ? ' ok' : lt ? ' lt' : '') + '">' + esc(lt ? '\u00e0 reprendre' : stText(e)) + '</span>';
+        /* seuls les points d\u00e9j\u00e0 vus se rouvrent d'un appui (corriger, reprendre) ; les autres viennent par le tunnel */
+        h += dn || lt ? '<li><button type="button" data-go="' + esc(e.id) + '">' + inner + '</button></li>' : '<li><div class="rw">' + inner + '</div></li>';
+      });
       h += '</ul>';
     }
   } else if (s.t === 'el') {
     var e = s.e;
     h += '<p class="eyebrow">' + (e.zone ? esc(e.zone.code + ' \u00b7 ' + e.zone.titre) + ' \u00b7 ' + e.rang + ' / ' + e.zone.elements.length : 'Toute la fiche') + '</p>';
     h += (e.photo ? elView(e) : '') + '<div class="fld"><h2 class="ft">' + pill(e) + '<span>' + title(e) + '</span></h2>' + field(e) + '</div>';
+    if (!WIDE && !isDone(e) && isLater(e)) h += '<p class="note">Point mis de c\u00f4t\u00e9 : \u00e0 reprendre avant l\u2019envoi.</p>';
     if (e.zone) h += '<div class="row"><button type="button" class="btn sm" data-zone="' + esc(e.zone.id) + '">Voir toute la zone ' + esc(e.zone.code) + '</button></div>';
   } else if (s.t === 'rem') {
     var zz = s.z, dd = zoneCount(zz);
-    h += '<p class="eyebrow">' + esc(zz.code + ' \u00b7 ' + zz.titre) + '</p><h1>Zone<br><em>termin\u00e9e ?</em></h1>';
-    h += '<p>' + dd + ' point' + (dd > 1 ? 's' : '') + ' sur ' + zz.elements.length + ' renseign\u00e9' + (dd > 1 ? 's' : '') + '.</p>' + (dd < zz.elements.length ? '<p class="note">Tu peux passer \u00e0 la suite, mais il faudra revenir sur ces points pour les renseigner ou les justifier (\u00ab non mesurable \u00bb, \u00ab photo impossible \u00bb + raison) avant la validation finale.</p>' : '') + missing(zz.elements);
+    h += '<p class="eyebrow">' + esc(zz.code + ' \u00b7 ' + zz.titre) + '</p><h1>Zone<br><em>' + (dd === zz.elements.length ? 'termin\u00e9e.' : '\u00e0 compl\u00e9ter.') + '</em></h1>';
+    h += '<p>' + dd + ' point' + (dd > 1 ? 's' : '') + ' sur ' + zz.elements.length + ' renseign\u00e9' + (dd > 1 ? 's' : '') + '.</p>' + (dd < zz.elements.length ? '<p class="note">Tu peux passer \u00e0 la zone suivante : ces points te seront repropos\u00e9s avant l\u2019envoi. Un point impossible \u00e0 relever se marque \u00ab non mesurable \u00bb ou \u00ab photo impossible \u00bb, avec sa raison.</p><button type="button" class="btn btn-ink btn-block" data-resume="' + esc(zz.id) + '">Reprendre ces points maintenant</button>' : '') + missing(zz.elements);
     h += '<label class="f" for="zr">Remarque sur la zone (facultatif)</label><textarea id="zr" data-zr="' + esc(zz.id) + '">' + esc((R.zones[zz.id] || {}).r || '') + '</textarea>';
   } else {
     var done = ALL.filter(isDone).length, fix = corrections(), sent = R.envoye;
@@ -438,7 +474,64 @@ function nextTodo(z, from) {
   }
   return todo[0];
 }
+/* ---------- tunnel (t\u00e9l\u00e9phone) : on m\u00e8ne le poseur point par point, rien ne s'oublie ---------- */
+function isLater(e) { return !isDone(e) && !!R.later[e.id]; }
+function todo(z) { return z.elements.filter(function (e) { return !isDone(e) && !R.later[e.id]; }); }
+function laterIn(z) { return z.elements.filter(isLater); }
+function defer(e) { if (!R.later[e.id]) { R.later[e.id] = 1; toast((e.ref || 'Point') + ' mis de c\u00f4t\u00e9 : il te sera repropos\u00e9 avant l\u2019envoi.'); } }
+function nearest(list, from) {
+  if (!list.length) return null; if (!from || !from.photo) return list[0];
+  var c = centre(from), same = list.filter(function (e) { return e.photo === from.photo; }); if (!same.length) return list[0];
+  same.sort(function (p, q) { var a = centre(p), b = centre(q), da = (a[0] - c[0]) * (a[0] - c[0]) + (a[1] - c[1]) * (a[1] - c[1]), db = (b[0] - c[0]) * (b[0] - c[0]) + (b[1] - c[1]) * (b[1] - c[1]); return da - db || p.rang - q.rang; });
+  return same[0];
+}
+function zoneSum(z) {
+  var n = { cote: 0, photo: 0, question: 0, cablage: 0 }; z.elements.forEach(function (e) { n[e.genre] = (n[e.genre] || 0) + 1; });
+  var p = []; if (n.cote) p.push(n.cote + ' cote' + (n.cote > 1 ? 's' : '')); if (n.photo) p.push(n.photo + ' photo' + (n.photo > 1 ? 's' : '')); if (n.question) p.push(n.question + ' question' + (n.question > 1 ? 's' : '')); if (n.cablage) p.push('c\u00e2blage');
+  return p.join(' \u00b7 ') || 'rien \u00e0 relever';
+}
+function zonePos(z) { var v = z.vues && z.vues[0]; return v ? { photo: v.photo, x: v.x + v.w / 2, y: v.y + v.h / 2 } : null; }
+/* zone la plus proche de `from` parmi `list` : m\u00eame photo d'abord, sinon l'ordre de la fiche */
+function nearZone(list, from) {
+  if (!list.length) return null; var a = from && zonePos(from); if (!a) return list[0];
+  var same = list.filter(function (z) { var b = zonePos(z); return b && b.photo === a.photo; }); if (!same.length) return list[0];
+  same.sort(function (p, q) { var b = zonePos(p), c = zonePos(q); return ((b.x - a.x) * (b.x - a.x) + (b.y - a.y) * (b.y - a.y)) - ((c.x - a.x) * (c.x - a.x) + (c.y - a.y) * (c.y - a.y)) || p.numero - q.numero; });
+  return same[0];
+}
+/* apr\u00e8s une zone : zone \u00e0 faire la plus proche, puis c\u00e2blage g\u00e9n\u00e9ral, puis retour sur les points mis de c\u00f4t\u00e9, puis validation */
+function target(from) {
+  var cg = DATA.cablageGeneral;
+  var a = nearZone(DATA.zones.filter(function (z) { return z !== from && todo(z).length; }), from); if (a) return { t: 'zone', z: a, lab: 'Zone suivante \u00b7 ' + a.code + ' \u2192' };
+  if (cg && !isDone(cg) && !R.later[cg.id]) return { t: 'el', e: cg, lab: 'C\u00e2blage g\u00e9n\u00e9ral \u2192' };
+  var b = nearZone(DATA.zones.filter(function (z) { return laterIn(z).length; }), from); if (b) return { t: 'zone', z: b, lab: 'Reprendre ' + b.code + ' \u2192' };
+  if (cg && isLater(cg)) return { t: 'el', e: cg, lab: 'Reprendre le c\u00e2blage \u2192' };
+  return { t: 'fin', lab: 'Validation finale \u2192' };
+}
+function goTarget(t) { selId = null; if (t.t === 'zone') go(findStep('zone', t.z.id)); else if (t.t === 'el') go(findStep('el', t.e.id)); else go(STEPS.length - 1); }
+function tunnelNext() {
+  var s = STEPS[cur], z = stepZone(s), td;
+  if (s.t === 'intro') { go(findStep('start')); return; }
+  if (s.t === 'start') { td = DATA.zones.filter(function (x) { return todo(x).length; }); if (td.length) go(findStep('zone', td[0].id)); else goTarget(target(null)); return; }
+  if (s.t === 'el') {
+    if (!isDone(s.e)) defer(s.e); else delete R.later[s.e.id];
+    save();
+    if (!z) { goTarget(target(null)); return; }
+    var n = nearest(todo(z), s.e);
+    if (n) go(findStep('el', n.id)); else go(findStep('rem', z.id));
+    return;
+  }
+  if (s.t === 'zone') {
+    td = todo(z);
+    if (!td.length && laterIn(z).length) { resume(z); return; }
+    if (td.length) go(findStep('el', td[0].id)); else go(findStep('rem', z.id));
+    return;
+  }
+  if (s.t === 'rem') goTarget(target(z));
+}
+/* reprise des points mis de c\u00f4t\u00e9 d'une zone */
+function resume(z) { laterIn(z).forEach(function (e) { delete R.later[e.id]; }); save(); var td = todo(z); if (td.length) go(findStep('el', td[0].id)); else go(findStep('rem', z.id)); }
 function goNext() {
+  if (!WIDE) { tunnelNext(); return; }
   var s = STEPS[cur], z = stepZone(s), from = s.t === 'el' ? s.e : (WIDE && selId ? ELS[selId] : null);
   if (z && s.t !== 'rem') {
     var t = nextTodo(z, from);
@@ -454,7 +547,17 @@ function goBack() {
   go(cur - 1, false, true);
 }
 function navLabel() {
-  var s = STEPS[cur], nx = document.getElementById('b-next'), z = stepZone(s), lab = 'Suivant \u2192';
+  var s = STEPS[cur], nx = document.getElementById('b-next'), z = stepZone(s), lab = 'Suivant \u2192', td;
+  if (!WIDE) {
+    if (s.t === 'intro') lab = 'Commencer \u2192';
+    else if (s.t === 'start') { td = DATA.zones.filter(function (x) { return todo(x).length; }); lab = td.length ? (ALL.some(isDone) ? 'Continuer par ' : 'Commencer par ') + td[0].code + ' \u2192' : target(null).lab; }
+    else if (s.t === 'el') lab = isDone(s.e) ? 'OK \u00b7 suivant \u2192' : 'Plus tard \u2192';
+    else if (s.t === 'zone') { td = todo(z); lab = td.length ? (zoneCount(z) ? 'Continuer la zone \u2192' : 'Commencer la zone \u2192') : laterIn(z).length ? 'Reprendre les points mis de c\u00f4t\u00e9 \u2192' : 'Suivant \u2192'; }
+    else if (s.t === 'rem') lab = target(z).lab;
+    nx.hidden = s.t === 'fin'; nx.textContent = lab;
+    document.getElementById('b-prev').disabled = cur === 0;
+    return;
+  }
   if (s.t === 'intro') lab = 'Commencer \u2192';
   else if (z && (s.t === 'rem' || (WIDE && !nextTodo(z, selId ? ELS[selId] : null)))) lab = (cur + 1 < STEPS.length && STEPS[cur + 1].t === 'zone') || (WIDE && findStep('zone', z.id) + 1 < STEPS.length && STEPS[findStep('zone', z.id) + 1].t === 'zone') ? 'Zone suivante \u2192' : 'Suivant \u2192';
   nx.hidden = s.t === 'fin'; nx.textContent = lab;
@@ -478,8 +581,11 @@ app.addEventListener('input', function (ev) {
   var card = t.closest('[data-card]'); if (card) card.classList.toggle('ok', isDone(ELS[card.dataset.card]));
 });
 app.addEventListener('click', function (ev) {
-  var b = ev.target.closest('[data-go],[data-t],[data-yn],[data-rs],[data-zone],[data-intro],#b-send,#b-dl'); if (!b) return;
+  var b = ev.target.closest('[data-go],[data-t],[data-yn],[data-rs],[data-zone],[data-intro],[data-ok],[data-resume],[data-fin],#b-send,#b-dl'); if (!b) return;
   var d = b.dataset, i, id;
+  if (d.fin) { selId = null; go(STEPS.length - 1); return; }
+  if (d.ok) { goNext(); return; }
+  if (d.resume) { var zr = DATA.zones.filter(function (x) { return x.id === d.resume; })[0]; if (zr) resume(zr); return; }
   if (d.intro) { selId = null; go(0); return; }
   if (d.zone) { selId = null; go(findStep('zone', d.zone)); return; }
   if (d.go) { goEl(d.go); return; }
@@ -501,6 +607,7 @@ app.addEventListener('change', function (ev) {
   img.onerror = function () { URL.revokeObjectURL(url); };
   img.src = url;
 });
+app.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' && ev.target.matches && ev.target.matches('.big input')) { ev.preventDefault(); ev.target.blur(); goNext(); } });
 document.getElementById('b-prev').addEventListener('click', goBack);
 document.getElementById('b-next').addEventListener('click', goNext);
 
@@ -559,6 +666,7 @@ app.addEventListener('click', function (ev) {
 /* ---------- plan ---------- */
 var sheet = document.getElementById('sheet'), sheetIn = document.getElementById('sheet-in');
 document.getElementById('b-plan').addEventListener('click', function () {
+  if (!WIDE) { selId = null; go(findStep('start')); return; }
   var h = '<h2>Plan du relev\u00e9</h2><ul class="lst"><li><button type="button" data-plan="intro"><span class="lb">Dossier et poseur</span></button></li>';
   DATA.zones.forEach(function (z) { var d = zoneCount(z), ok = d === z.elements.length; h += '<li><button type="button" data-plan="z:' + esc(z.id) + '"><span class="code' + (ok ? ' done' : '') + '" style="border-radius:0;background:' + (ok ? '' : '#0F0D0C') + '">' + esc(z.code) + '</span><span class="lb">' + esc(z.titre) + '</span><span class="st' + (ok ? ' ok' : '') + '">' + d + ' / ' + z.elements.length + '</span></button></li>'; });
   if (DATA.cablageGeneral) h += '<li><button type="button" data-plan="e:' + esc(DATA.cablageGeneral.id) + '">' + pill(DATA.cablageGeneral) + '<span class="lb">C\u00e2blage et arriv\u00e9es \u00e9lectriques</span><span class="st">' + esc(stText(DATA.cablageGeneral)) + '</span></button></li>';
@@ -674,6 +782,7 @@ function direct(a, pdf, say, download) {
   if (pdf) b64(pdf, go2); else go2('');
 }
 function start() {
+  if (!R.later || typeof R.later !== 'object') R.later = {};
   var key = R.pos; buildSteps(); cur = 0;
   if (key) for (var i = 0; i < STEPS.length; i++) if (stepKey(STEPS[i]) === key) cur = i;
   render();
