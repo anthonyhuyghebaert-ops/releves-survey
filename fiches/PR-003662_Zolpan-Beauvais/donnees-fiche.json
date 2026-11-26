@@ -1,0 +1,844 @@
+{
+ "format": "fiche-survey",
+ "schema": 1,
+ "moteur": 11,
+ "exporteLe": "2026-11-26T19:03:10.071Z",
+ "fiche": {
+  "id": "mwvtp7ftc3o4sp",
+  "version": 14,
+  "empreinte": "80bc4f2f",
+  "pr": "PR-003662",
+  "dossier": "CROMOLOGY - ZOLPAN BEAUVAIS - SURVEY 2027",
+  "enseigne": "Cromology",
+  "enseigneExistante": "",
+  "site": "Zolpan Beauvais",
+  "adresse": "10 rue Arago, 60000 BEAUVAIS",
+  "date": "30 Novembre 01 - 02 - 03 Décembre",
+  "poseur": "",
+  "priorite": "",
+  "envoiPhotos": "",
+  "photosWeb": false,
+  "lien": "5fa6mk3ktcrmuvqw",
+  "url": "https://anthonyhuyghebaert-ops.github.io/releves-survey/r/5fa6mk3ktcrmuvqw/"
+ },
+ "unite": "mm",
+ "repere": "pixels de la photo d’origine, origine en haut à gauche",
+ "photos": [
+  {
+   "id": "mwvtrqg21egspu",
+   "rang": 1,
+   "libelle": "vue 1",
+   "w": 934,
+   "h": 460
+  },
+  {
+   "id": "mwvtrqhjqypfgk",
+   "rang": 2,
+   "libelle": "vue 2",
+   "w": 872,
+   "h": 729
+  }
+ ],
+ "zones": [
+  {
+   "id": "mwxqhx8j4dpnyo",
+   "numero": 1,
+   "code": "Z1",
+   "nom": "",
+   "titre": "vue 1",
+   "proposee": false,
+   "ensemble": false,
+   "vues": [
+    {
+     "photo": "mwvtrqg21egspu",
+     "x": 159,
+     "y": 69,
+     "w": 185,
+     "h": 290
+    }
+   ],
+   "elements": [
+    {
+     "id": "mwvtscusyy4o8k",
+     "genre": "cote",
+     "rang": 1,
+     "code": "L1",
+     "ref": "Z1 · L1",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 211,
+      "y1": 265,
+      "x2": 246,
+      "y2": 269
+     }
+    },
+    {
+     "id": "mwvtsncaep8aoh",
+     "genre": "cote",
+     "rang": 2,
+     "code": "L2",
+     "ref": "Z1 · L2",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 258,
+      "y1": 203,
+      "x2": 303,
+      "y2": 202
+     }
+    },
+    {
+     "id": "mwvts6n2gz7yo4",
+     "genre": "cote",
+     "rang": 3,
+     "code": "H1",
+     "ref": "Z1 · H1",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "Mesurer la hauteur : 10 cm près suffisent.",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 204,
+      "y1": 138,
+      "x2": 202,
+      "y2": 249
+     }
+    },
+    {
+     "id": "mwvtsgz3cjxm1r",
+     "genre": "cote",
+     "rang": 4,
+     "code": "H2",
+     "ref": "Z1 · H2",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 241,
+      "y1": 248,
+      "x2": 241,
+      "y2": 322
+     }
+    },
+    {
+     "id": "mwvtsqtua5aymp",
+     "genre": "cote",
+     "rang": 5,
+     "code": "H3",
+     "ref": "Z1 · H3",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 305,
+      "y1": 161,
+      "x2": 305,
+      "y2": 198
+     }
+    },
+    {
+     "id": "mwvtsw50i8ef48",
+     "genre": "cote",
+     "rang": 6,
+     "code": "H4",
+     "ref": "Z1 · H4",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 338,
+      "y1": 113,
+      "x2": 338,
+      "y2": 350
+     }
+    },
+    {
+     "id": "mwvtudh3p1swtx",
+     "genre": "photo",
+     "rang": 7,
+     "code": "Photo 1",
+     "ref": "Z1 · Photo 1",
+     "numero": 1,
+     "libelle": "Là, je ne peux pas voir avec ce plan-là. Comment est faite cette zone ? J'aurais",
+     "consigne": "",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 198,
+      "y": 274
+     }
+    },
+    {
+     "id": "mwvtuil7vm5rwd",
+     "genre": "photo",
+     "rang": 8,
+     "code": "Photo 2",
+     "ref": "Z1 · Photo 2",
+     "numero": 2,
+     "libelle": "Là, j'ai besoin de savoir comment y fabriquer le haut de la façade. Si demain no",
+     "consigne": "Photographier le haut de façade et l'épaisseur, pour fabriquer l'enseigne.",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 263,
+      "y": 129
+     }
+    },
+    {
+     "id": "mwvtuk5rz9i3gr",
+     "genre": "photo",
+     "rang": 9,
+     "code": "Photo 3",
+     "ref": "Z1 · Photo 3",
+     "numero": 3,
+     "libelle": "Sur cette zone, j'ai besoin de voir comment sont réalisés les spots électriques,",
+     "consigne": "",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 274,
+      "y": 172
+     }
+    },
+    {
+     "id": "mwxvabxzrglcrl",
+     "genre": "photo",
+     "rang": 10,
+     "code": "Photo 4",
+     "ref": "Z1 · Photo 4",
+     "numero": 4,
+     "libelle": "",
+     "consigne": "Photographier la façade pour voir sa forme, les creux et les bosses.",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 290,
+      "y": 279
+     }
+    },
+    {
+     "id": "mwvyp2qbghlywl",
+     "genre": "question",
+     "rang": 11,
+     "code": "Q1",
+     "ref": "Z1 · Q1",
+     "numero": 1,
+     "libelle": "Faire un schéma des vitres et prendre les cotes.",
+     "attendu": "schema",
+     "choix": [],
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 223,
+      "y": 290
+     }
+    },
+    {
+     "id": "mwvtwqr69u8n4p",
+     "genre": "cablage",
+     "rang": 12,
+     "code": "Câblage",
+     "ref": "Z1 · Câblage",
+     "libelle": "Câblage et arrivées électriques",
+     "pointage": true,
+     "champs": [
+      {
+       "id": "a_retenir",
+       "libelle": "À retenir (coffret, passage des câbles…)",
+       "unite": ""
+      }
+     ],
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 222,
+      "y": 138,
+      "w": 105,
+      "h": 63
+     }
+    }
+   ]
+  },
+  {
+   "id": "mwxqi71xhfveb1",
+   "numero": 2,
+   "code": "Z2",
+   "nom": "",
+   "titre": "vue 1",
+   "proposee": false,
+   "ensemble": false,
+   "vues": [
+    {
+     "photo": "mwvtrqg21egspu",
+     "x": 358,
+     "y": 83,
+     "w": 461,
+     "h": 143
+    }
+   ],
+   "elements": [
+    {
+     "id": "mwvtthpgeax3vm",
+     "genre": "cote",
+     "rang": 1,
+     "code": "L",
+     "ref": "Z2 · L",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 375,
+      "y1": 195,
+      "x2": 783,
+      "y2": 204
+     }
+    },
+    {
+     "id": "mwvttdd5817srx",
+     "genre": "cote",
+     "rang": 2,
+     "code": "H",
+     "ref": "Z2 · H",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 388,
+      "y1": 163,
+      "x2": 388,
+      "y2": 199
+     }
+    },
+    {
+     "id": "mwvtulaj2dk2il",
+     "genre": "photo",
+     "rang": 3,
+     "code": "Photo 5",
+     "ref": "Z2 · Photo 5",
+     "numero": 5,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 445,
+      "y": 163
+     }
+    },
+    {
+     "id": "mwvtutpmqcphrm",
+     "genre": "photo",
+     "rang": 4,
+     "code": "Photo 6",
+     "ref": "Z2 · Photo 6",
+     "numero": 6,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 804,
+      "y": 143
+     }
+    },
+    {
+     "id": "mwvtwvjisjpfpn",
+     "genre": "cablage",
+     "rang": 5,
+     "code": "Câblage",
+     "ref": "Z2 · Câblage",
+     "libelle": "Câblage et arrivées électriques",
+     "pointage": true,
+     "champs": [
+      {
+       "id": "a_retenir",
+       "libelle": "À retenir (coffret, passage des câbles…)",
+       "unite": ""
+      }
+     ],
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 374,
+      "y": 155,
+      "w": 422,
+      "h": 62
+     }
+    }
+   ]
+  },
+  {
+   "id": "mwxqifx8ejiueu",
+   "numero": 3,
+   "code": "Z3",
+   "nom": "",
+   "titre": "vue 1",
+   "proposee": false,
+   "ensemble": false,
+   "vues": [
+    {
+     "photo": "mwvtrqg21egspu",
+     "x": 366,
+     "y": 201,
+     "w": 460,
+     "h": 159
+    }
+   ],
+   "elements": [
+    {
+     "id": "mwvtt33eztowko",
+     "genre": "cote",
+     "rang": 1,
+     "code": "L1",
+     "ref": "Z3 · L1",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 375,
+      "y1": 222,
+      "x2": 527,
+      "y2": 225
+     }
+    },
+    {
+     "id": "mwvttrkesvo797",
+     "genre": "cote",
+     "rang": 2,
+     "code": "L2",
+     "ref": "Z3 · L2",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 611,
+      "y1": 271,
+      "x2": 786,
+      "y2": 270
+     }
+    },
+    {
+     "id": "mwvttywrwrkxe4",
+     "genre": "cote",
+     "rang": 3,
+     "code": "L3",
+     "ref": "Z3 · L3",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 665,
+      "y1": 234,
+      "x2": 741,
+      "y2": 234
+     }
+    },
+    {
+     "id": "mwvtt8qg9rk3zw",
+     "genre": "cote",
+     "rang": 4,
+     "code": "H1",
+     "ref": "Z3 · H1",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 500,
+      "y1": 201,
+      "x2": 500,
+      "y2": 335
+     }
+    },
+    {
+     "id": "mwvttnyj8q1e2e",
+     "genre": "cote",
+     "rang": 5,
+     "code": "H2",
+     "ref": "Z3 · H2",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 602,
+      "y1": 248,
+      "x2": 603,
+      "y2": 331
+     }
+    },
+    {
+     "id": "mwvtu3ucseo8h4",
+     "genre": "cote",
+     "rang": 6,
+     "code": "H3",
+     "ref": "Z3 · H3",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 681,
+      "y1": 226,
+      "x2": 681,
+      "y2": 244
+     }
+    },
+    {
+     "id": "mwvyqs1540jump",
+     "genre": "cote",
+     "rang": 7,
+     "code": "P",
+     "ref": "Z3 · P",
+     "type": "Profondeur",
+     "libelle": "Profondeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x1": 793,
+      "y1": 266,
+      "x2": 782,
+      "y2": 259
+     }
+    },
+    {
+     "id": "mwvtuopnor9ocs",
+     "genre": "photo",
+     "rang": 8,
+     "code": "Photo 7",
+     "ref": "Z3 · Photo 7",
+     "numero": 7,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 525,
+      "y": 339
+     }
+    },
+    {
+     "id": "mwvturtelurpeu",
+     "genre": "photo",
+     "rang": 9,
+     "code": "Photo 8",
+     "ref": "Z3 · Photo 8",
+     "numero": 8,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 636,
+      "y": 285
+     }
+    },
+    {
+     "id": "mwvtv08jtt0gti",
+     "genre": "question",
+     "rang": 10,
+     "code": "Q2",
+     "ref": "Z3 · Q2",
+     "numero": 2,
+     "libelle": "Regarder la planéité.",
+     "attendu": "oui_non",
+     "choix": [],
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 590,
+      "y": 346
+     }
+    },
+    {
+     "id": "mwvtvk9txd41t3",
+     "genre": "question",
+     "rang": 11,
+     "code": "Q3",
+     "ref": "Z3 · Q3",
+     "numero": 3,
+     "libelle": "Profondeur, faire un schéma des vitres et les coter.",
+     "attendu": "schema",
+     "choix": [],
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 646,
+      "y": 259
+     }
+    }
+   ]
+  },
+  {
+   "id": "gen-mwvtrqg21egspu",
+   "numero": 4,
+   "code": "Z4",
+   "nom": "",
+   "titre": "vue 1, ensemble",
+   "proposee": false,
+   "ensemble": true,
+   "vues": [
+    {
+     "photo": "mwvtrqg21egspu",
+     "x": 0,
+     "y": 0,
+     "w": 934,
+     "h": 460
+    }
+   ],
+   "elements": [
+    {
+     "id": "mwvtuma8za9j02",
+     "genre": "photo",
+     "rang": 1,
+     "code": "Photo 9",
+     "ref": "Z4 · Photo 9",
+     "numero": 9,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 349,
+      "y": 159
+     }
+    },
+    {
+     "id": "mwvtuufpqqrhjz",
+     "genre": "photo",
+     "rang": 2,
+     "code": "Photo 10",
+     "ref": "Z4 · Photo 10",
+     "numero": 10,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvtrqg21egspu",
+     "position": {
+      "x": 860,
+      "y": 224
+     }
+    }
+   ]
+  },
+  {
+   "id": "auto-mwvtrqhjqypfgk-0",
+   "numero": 5,
+   "code": "Z5",
+   "nom": "",
+   "titre": "vue 2",
+   "proposee": true,
+   "ensemble": false,
+   "vues": [
+    {
+     "photo": "mwvtrqhjqypfgk",
+     "x": 440,
+     "y": 76,
+     "w": 204,
+     "h": 508
+    }
+   ],
+   "elements": [
+    {
+     "id": "mwvtx3hzesusvm",
+     "genre": "cote",
+     "rang": 1,
+     "code": "L1",
+     "ref": "Z5 · L1",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqhjqypfgk",
+     "position": {
+      "x1": 495,
+      "y1": 207,
+      "x2": 620,
+      "y2": 196
+     }
+    },
+    {
+     "id": "mwxqdt4lz0l408",
+     "genre": "cote",
+     "rang": 2,
+     "code": "L2",
+     "ref": "Z5 · L2",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqhjqypfgk",
+     "position": {
+      "x1": 511,
+      "y1": 165,
+      "x2": 605,
+      "y2": 154
+     }
+    },
+    {
+     "id": "mwvtxagcttbihj",
+     "genre": "cote",
+     "rang": 3,
+     "code": "H1",
+     "ref": "Z5 · H1",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqhjqypfgk",
+     "position": {
+      "x1": 498,
+      "y1": 100,
+      "x2": 496,
+      "y2": 507
+     }
+    },
+    {
+     "id": "mwvtxopmjuxe8o",
+     "genre": "cote",
+     "rang": 4,
+     "code": "H2",
+     "ref": "Z5 · H2",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqhjqypfgk",
+     "position": {
+      "x1": 535,
+      "y1": 509,
+      "x2": 534,
+      "y2": 560
+     }
+    },
+    {
+     "id": "mwxqe11k13t0mo",
+     "genre": "cote",
+     "rang": 5,
+     "code": "H3",
+     "ref": "Z5 · H3",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqhjqypfgk",
+     "position": {
+      "x1": 531,
+      "y1": 114,
+      "x2": 529,
+      "y2": 507
+     }
+    },
+    {
+     "id": "mwvtyp14tg7kha",
+     "genre": "cote",
+     "rang": 6,
+     "code": "E",
+     "ref": "Z5 · E",
+     "type": "Épaisseur",
+     "libelle": "Épaisseur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvtrqhjqypfgk",
+     "position": {
+      "x1": 616,
+      "y1": 272,
+      "x2": 627,
+      "y2": 268
+     }
+    },
+    {
+     "id": "mwvtz85115pj71",
+     "genre": "photo",
+     "rang": 7,
+     "code": "Photo 11",
+     "ref": "Z5 · Photo 11",
+     "numero": 11,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvtrqhjqypfgk",
+     "position": {
+      "x": 503,
+      "y": 539
+     }
+    },
+    {
+     "id": "mwvtza6fduszbz",
+     "genre": "photo",
+     "rang": 8,
+     "code": "Photo 12",
+     "ref": "Z5 · Photo 12",
+     "numero": 12,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvtrqhjqypfgk",
+     "position": {
+      "x": 630,
+      "y": 382
+     }
+    },
+    {
+     "id": "mwvtzcobgjrdd2",
+     "genre": "photo",
+     "rang": 9,
+     "code": "Photo 13",
+     "ref": "Z5 · Photo 13",
+     "numero": 13,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvtrqhjqypfgk",
+     "position": {
+      "x": 549,
+      "y": 325
+     }
+    },
+    {
+     "id": "mwvtzg6l5nvmn1",
+     "genre": "question",
+     "rang": 10,
+     "code": "Q4",
+     "ref": "Z5 · Q4",
+     "numero": 4,
+     "libelle": "Prendre des photos de la fixation et la coter.",
+     "attendu": "oui_non",
+     "choix": [],
+     "photo": "mwvtrqhjqypfgk",
+     "position": {
+      "x": 478,
+      "y": 518
+     }
+    },
+    {
+     "id": "mwxqelgu508br9",
+     "genre": "question",
+     "rang": 11,
+     "code": "Q5",
+     "ref": "Z5 · Q5",
+     "numero": 5,
+     "libelle": "Me renseigner sur la structure de fixation au sol",
+     "attendu": "oui_non",
+     "choix": [],
+     "photo": "mwvtrqhjqypfgk",
+     "position": {
+      "x": 613,
+      "y": 538
+     }
+    }
+   ]
+  }
+ ],
+ "cablageGeneral": null
+}
