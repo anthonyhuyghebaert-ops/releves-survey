@@ -120,7 +120,14 @@ input:focus,textarea:focus,button:focus-visible{outline:3px solid var(--or);outl
 .ttm svg{display:block;width:100%;height:34vh;min-height:220px;max-height:420px}
 .ttc{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
 .ttv{font:inherit;font-size:15px;font-weight:600;line-height:1.2;text-align:center;border:2px solid #DADADA;background:#fff;color:#0F0D0C;padding:6px 6px 10px;cursor:pointer;min-height:48px}
-.ttv svg{display:block;width:100%;height:118px;margin-bottom:4px}
+.ttv svg{display:block;width:100%;height:100px;margin-bottom:4px}
+.tth{margin:0 0 2px}
+.ttd{display:grid;grid-template-columns:2fr 3fr;gap:8px;margin:0 0 10px}
+.ttd .ttm{margin:0}
+.ttd .ttm,.ttd .ttp{position:relative;border:1px solid #DADADA}
+.ttd .ttp{background:#0F0D0C}
+.ttd svg{display:block;width:100%;height:30vh;min-height:190px;max-height:340px}
+.ttd span{position:absolute;left:0;top:0;background:#0F0D0C;color:#fff;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:3px 6px}
 .ttv[aria-pressed=true]{border:3px solid #E85E10;padding:5px 5px 9px}
 .ttv:focus-visible{outline:3px solid #E85E10;outline-offset:2px}
 .ttl{list-style:none;margin:0 0 6px;padding:0;font-size:14px;display:grid;grid-template-columns:1fr 1fr;gap:4px 10px}
@@ -595,6 +602,12 @@ function ttNA(e) {
   if (e.totemCote === 'H') return s.structure !== 'cadre' || s.tenue !== 'feuil';
   return false;
 }
+/* photo du totem : premi\u00e8re vue de la zone, recadr\u00e9e sur son cadre, sans les points */
+function ttPhoto(z) {
+  var v = z && z.vues && z.vues[0], ph = v && PHOTOS[v.photo]; if (!ph || !ph.image) return '';
+  var m = Math.round(Math.max(v.w, v.h) * 0.04), x = Math.max(0, v.x - m), y = Math.max(0, v.y - m), w = Math.min(ph.w - x, v.w + 2 * m), hh = Math.min(ph.h - y, v.h + 2 * m);
+  return '<div class="ttp"><svg viewBox="' + x + ' ' + y + ' ' + w + ' ' + hh + '" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Photo du totem"><image href="' + ph.image + '" width="' + ph.w + '" height="' + ph.h + '"/></svg><span>Le totem</span></div>';
+}
 function ttPaint() {
   var list = app.querySelectorAll('svg[data-tt]');
   for (var n = 0; n < list.length; n++) {
@@ -646,7 +659,7 @@ function field(e) {
       h += '<div class="row"><label class="btn btn-ink" style="flex:1 1 220px">' + (SHOTS[e.id] ? 'Reprendre la photo du sch\u00e9ma' : 'Photographier le sch\u00e9ma') + '<input type="file" accept="image/*" capture="environment" data-shot="' + id + '" hidden' + (r.np ? ' disabled' : '') + '></label></div>';
       h += '<label class="f" for="p-' + id + '">Pr\u00e9cisions (facultatif)</label><textarea id="p-' + id + '" data-f="' + id + ':p">' + esc(r.p || '') + '</textarea>';
     } else if (e.attendu === 'choix' && e.totem) {
-      h += '<p class="cons">Touche le dessin qui ressemble au totem. La pi\u00e8ce concern\u00e9e est en orange.</p><div class="ttc">';
+      h += '<p class="hint tth">Touche le dessin qui ressemble. La pi\u00e8ce concern\u00e9e est en orange.</p><div class="ttc">';
       (e.choix || []).forEach(function (cl, ci) { h += '<button type="button" class="ttv" data-ch="' + id + ':' + ci + '" aria-pressed="' + (r.r === cl && !r.np ? 'true' : 'false') + '"><svg data-tt="opt|' + id + '|' + ci + '" aria-hidden="true"></svg>' + esc(cl) + '</button>'; });
       h += '</div><div class="row">';
       ['Je ne sais pas', 'Je ne comprends pas la question'].forEach(function (x) { h += '<button type="button" class="btn sm" data-tn="' + id + ':' + esc(x) + '" aria-pressed="' + (r.np && r.rs === x ? 'true' : 'false') + '">' + esc(x) + '</button>'; });
@@ -769,7 +782,7 @@ function render(keepScroll) {
     var e = s.e;
     h += '<p class="eyebrow">' + (e.zone ? esc(e.zone.code + ' \u00b7 ' + e.zone.titre) + ' \u00b7 ' + e.rang + ' / ' + e.zone.elements.length : 'Toute la fiche') + '</p>';
     var sec = !WIDE && R.second[e.id] && !isDone(e);
-    h += (e.photo ? elView(e) : e.totemCote ? '<div class="ttm"><svg data-tt="cote|' + esc(e.id) + '" role="img" aria-label="Dessin du totem montrant la cote ' + esc(e.libelle) + '"></svg></div>' : e.totem ? '<div class="ttm"><svg data-tt="cur|' + esc(e.id) + '" role="img" aria-label="Dessin du totem d\u2019apr\u00e8s tes r\u00e9ponses"></svg></div>' : '') + '<div class="fld"><h2 class="ft">' + pill(e) + '<span>' + title(e) + '</span></h2>' + (sec ? '<p class="band">Point mis de c\u00f4t\u00e9 : \u00e0 renseigner maintenant.</p>' : '') + field(e) + (sec && !e.totem && !(R.rep[e.id] || {}).nm && !(R.rep[e.id] || {}).imp && !(R.rep[e.id] || {}).np ? '<button type="button" class="btn btn-ink btn-block" style="margin-top:14px" data-cant="' + esc(e.id) + '">Je ne peux pas</button>' : '') + '</div>';
+    h += (e.photo ? elView(e) : e.totemCote ? '<div class="ttd">' + ttPhoto(e.zone) + '<div class="ttm"><svg data-tt="cote|' + esc(e.id) + '" role="img" aria-label="Dessin du totem montrant la cote ' + esc(e.libelle) + '"></svg><span>O\u00f9 mesurer</span></div></div>' : '') + '<div class="fld"><h2 class="ft">' + pill(e) + '<span>' + title(e) + '</span></h2>' + (sec ? '<p class="band">Point mis de c\u00f4t\u00e9 : \u00e0 renseigner maintenant.</p>' : '') + field(e) + (sec && !e.totem && !(R.rep[e.id] || {}).nm && !(R.rep[e.id] || {}).imp && !(R.rep[e.id] || {}).np ? '<button type="button" class="btn btn-ink btn-block" style="margin-top:14px" data-cant="' + esc(e.id) + '">Je ne peux pas</button>' : '') + '</div>';
     if (e.zone) h += '<div class="row"><button type="button" class="btn sm" data-zone="' + esc(e.zone.id) + '">Voir toute la zone ' + esc(e.zone.code) + '</button></div>';
   } else if (s.t === 'rem') {
     var zz = s.z, dd = zoneCount(zz);
