@@ -1,0 +1,2373 @@
+{
+ "format": "fiche-survey",
+ "schema": 1,
+ "moteur": 11,
+ "exporteLe": "2026-11-27T06:14:22.230Z",
+ "fiche": {
+  "id": "mwvzsrnr89t987",
+  "version": 5,
+  "empreinte": "8a87018d",
+  "pr": "PR-003651",
+  "dossier": "CROMOLOGY - ZOLPAN ROSNY-SOUS-BOIS - SURVEY 2027",
+  "enseigne": "Cromology",
+  "enseigneExistante": "",
+  "site": "Zolpan Rosny-Sous-Bois",
+  "adresse": "5 Rue Joseph et Etienne Montgolfier, 93110 ROSNY SOUS BOIS",
+  "date": "",
+  "poseur": "",
+  "priorite": "",
+  "envoiPhotos": "",
+  "photosWeb": false,
+  "lien": "dgweub6aekvgiq4g",
+  "url": "https://anthonyhuyghebaert-ops.github.io/releves-survey/r/dgweub6aekvgiq4g/"
+ },
+ "unite": "mm",
+ "repere": "pixels de la photo d’origine, origine en haut à gauche",
+ "photos": [
+  {
+   "id": "mwvzto8o7bwyb6",
+   "rang": 1,
+   "libelle": "vue 1",
+   "w": 804,
+   "h": 891
+  },
+  {
+   "id": "mwvztu14044l25",
+   "rang": 2,
+   "libelle": "vue 2",
+   "w": 978,
+   "h": 746
+  },
+  {
+   "id": "mwvztxb53nxy8p",
+   "rang": 3,
+   "libelle": "vue 3",
+   "w": 832,
+   "h": 891
+  },
+  {
+   "id": "mwvztzki7q3v0r",
+   "rang": 4,
+   "libelle": "vue 4",
+   "w": 1292,
+   "h": 878
+  },
+  {
+   "id": "mwvzu60jr2yqrf",
+   "rang": 5,
+   "libelle": "vue 5",
+   "w": 1049,
+   "h": 675
+  },
+  {
+   "id": "mwvzux7o0k5xcq",
+   "rang": 6,
+   "libelle": "vue 6",
+   "w": 766,
+   "h": 429
+  },
+  {
+   "id": "mwvzv2b83bzvge",
+   "rang": 7,
+   "libelle": "vue 7",
+   "w": 1184,
+   "h": 606
+  }
+ ],
+ "zones": [
+  {
+   "id": "mwyl40tdoyaiav",
+   "numero": 1,
+   "code": "Z1",
+   "nom": "",
+   "titre": "vue 1",
+   "proposee": false,
+   "ensemble": false,
+   "totem": true,
+   "vues": [
+    {
+     "photo": "mwvzto8o7bwyb6",
+     "x": 419,
+     "y": 105,
+     "w": 150,
+     "h": 756
+    }
+   ],
+   "elements": [
+    {
+     "id": "tt-mwyl40tdoyaiav-faces",
+     "genre": "question",
+     "rang": 1,
+     "code": "T1",
+     "ref": "Z1 · T1",
+     "numero": 1,
+     "libelle": "Totem : combien de faces ?",
+     "attendu": "choix",
+     "choix": [
+      "1 face",
+      "2 faces",
+      "3 faces",
+      "4 faces ou plus"
+     ],
+     "valeurs": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "totem": "faces"
+    },
+    {
+     "id": "tt-mwyl40tdoyaiav-structure",
+     "genre": "question",
+     "rang": 2,
+     "code": "T2",
+     "ref": "Z1 · T2",
+     "numero": 2,
+     "libelle": "Totem : comment est-il construit ?",
+     "attendu": "choix",
+     "choix": [
+      "Cadre + panneau",
+      "Caisson plein",
+      "Mât central"
+     ],
+     "valeurs": [
+      "cadre",
+      "caisson",
+      "mat"
+     ],
+     "totem": "structure"
+    },
+    {
+     "id": "tt-mwyl40tdoyaiav-npan",
+     "genre": "question",
+     "rang": 3,
+     "code": "T3",
+     "ref": "Z1 · T3",
+     "numero": 3,
+     "libelle": "Totem : combien de panneaux par face ?",
+     "attendu": "choix",
+     "choix": [
+      "1 panneau",
+      "2 panneaux",
+      "3 panneaux",
+      "4 panneaux ou plus"
+     ],
+     "valeurs": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "totem": "npan"
+    },
+    {
+     "id": "tt-mwyl40tdoyaiav-tenue",
+     "genre": "question",
+     "rang": 4,
+     "code": "T4",
+     "ref": "Z1 · T4",
+     "numero": 4,
+     "libelle": "Totem : comment tiennent les panneaux ?",
+     "attendu": "choix",
+     "choix": [
+      "Dans le cadre",
+      "Vissés devant",
+      "Glissés en rail",
+      "Toile tendue",
+      "Face plexi"
+     ],
+     "valeurs": [
+      "feuil",
+      "vis",
+      "rail",
+      "toile",
+      "plexi"
+     ],
+     "totem": "tenue"
+    },
+    {
+     "id": "tt-mwyl40tdoyaiav-trav",
+     "genre": "question",
+     "rang": 5,
+     "code": "T5",
+     "ref": "Z1 · T5",
+     "numero": 5,
+     "libelle": "Totem : des traverses entre les panneaux ?",
+     "attendu": "choix",
+     "choix": [
+      "Aucune",
+      "Visibles",
+      "Cachées"
+     ],
+     "valeurs": [
+      "non",
+      "vis",
+      "cach"
+     ],
+     "totem": "trav"
+    },
+    {
+     "id": "tt-mwyl40tdoyaiav-npot",
+     "genre": "question",
+     "rang": 6,
+     "code": "T6",
+     "ref": "Z1 · T6",
+     "numero": 6,
+     "libelle": "Totem : combien de poteaux ?",
+     "attendu": "choix",
+     "choix": [
+      "1 poteau",
+      "2 poteaux",
+      "3 poteaux ou plus"
+     ],
+     "valeurs": [
+      "1",
+      "2",
+      "3"
+     ],
+     "totem": "npot"
+    },
+    {
+     "id": "tt-mwyl40tdoyaiav-section",
+     "genre": "question",
+     "rang": 7,
+     "code": "T7",
+     "ref": "Z1 · T7",
+     "numero": 7,
+     "libelle": "Totem : forme des poteaux ?",
+     "attendu": "choix",
+     "choix": [
+      "Ronde",
+      "Carrée",
+      "Rectangulaire"
+     ],
+     "valeurs": [
+      "ronde",
+      "carree",
+      "rect"
+     ],
+     "totem": "section"
+    },
+    {
+     "id": "tt-mwyl40tdoyaiav-fix",
+     "genre": "question",
+     "rang": 8,
+     "code": "T8",
+     "ref": "Z1 · T8",
+     "numero": 8,
+     "libelle": "Totem : comment est-il fixé au sol ?",
+     "attendu": "choix",
+     "choix": [
+      "Platines boulonnées",
+      "Massif béton",
+      "Scellé dans le sol",
+      "Fixation non visible"
+     ],
+     "valeurs": [
+      "platine",
+      "massif",
+      "scelle",
+      "inconnu"
+     ],
+     "totem": "fix"
+    },
+    {
+     "id": "tt-mwyl40tdoyaiav-ecl",
+     "genre": "question",
+     "rang": 9,
+     "code": "T9",
+     "ref": "Z1 · T9",
+     "numero": 9,
+     "libelle": "Totem : est-il éclairé ?",
+     "attendu": "choix",
+     "choix": [
+      "Pas éclairé",
+      "De l’intérieur",
+      "Par des spots"
+     ],
+     "valeurs": [
+      "non",
+      "int",
+      "spots"
+     ],
+     "totem": "ecl"
+    },
+    {
+     "id": "tt-mwyl40tdoyaiav-tete",
+     "genre": "question",
+     "rang": 10,
+     "code": "T10",
+     "ref": "Z1 · T10",
+     "numero": 10,
+     "libelle": "Totem : le haut du totem ?",
+     "attendu": "choix",
+     "choix": [
+      "Capot",
+      "Cadre apparent",
+      "Rien"
+     ],
+     "valeurs": [
+      "capot",
+      "cadre",
+      "rien"
+     ],
+     "totem": "tete"
+    },
+    {
+     "id": "ts-mwyl40tdoyaiav",
+     "genre": "question",
+     "rang": 11,
+     "code": "TS",
+     "ref": "Z1 · TS",
+     "numero": 11,
+     "libelle": "Totem à 3 faces ou plus : schéma vu de dessus, coté, à photographier",
+     "attendu": "schema",
+     "choix": [],
+     "totemSchema": true
+    },
+    {
+     "id": "tc-mwyl40tdoyaiav-A",
+     "genre": "cote",
+     "rang": 12,
+     "code": "TA",
+     "ref": "Z1 · TA",
+     "type": "Totem",
+     "libelle": "Hauteur du cadre",
+     "consigne": "Du bas du cadre jusqu’en haut, à l’extérieur.",
+     "unite": "mm",
+     "totemCote": "A"
+    },
+    {
+     "id": "tc-mwyl40tdoyaiav-B",
+     "genre": "cote",
+     "rang": 13,
+     "code": "TB",
+     "ref": "Z1 · TB",
+     "type": "Totem",
+     "libelle": "Largeur du cadre",
+     "consigne": "D’un bord extérieur à l’autre.",
+     "unite": "mm",
+     "totemCote": "B"
+    },
+    {
+     "id": "tc-mwyl40tdoyaiav-C",
+     "genre": "cote",
+     "rang": 14,
+     "code": "TC",
+     "ref": "Z1 · TC",
+     "type": "Totem",
+     "libelle": "Épaisseur du cadre",
+     "consigne": "Le cadre vu de côté, de l’avant à l’arrière.",
+     "unite": "mm",
+     "totemCote": "C"
+    },
+    {
+     "id": "tc-mwyl40tdoyaiav-D",
+     "genre": "cote",
+     "rang": 15,
+     "code": "TD",
+     "ref": "Z1 · TD",
+     "type": "Totem",
+     "libelle": "Hauteur sous cadre",
+     "consigne": "Du sol jusqu’au bas du cadre.",
+     "unite": "mm",
+     "totemCote": "D"
+    },
+    {
+     "id": "tc-mwyl40tdoyaiav-E",
+     "genre": "cote",
+     "rang": 16,
+     "code": "TE",
+     "ref": "Z1 · TE",
+     "type": "Totem",
+     "libelle": "Largeur du panneau",
+     "consigne": "Le panneau seul, sans le cadre.",
+     "unite": "mm",
+     "totemCote": "E"
+    },
+    {
+     "id": "tc-mwyl40tdoyaiav-F",
+     "genre": "cote",
+     "rang": 17,
+     "code": "TF",
+     "ref": "Z1 · TF",
+     "type": "Totem",
+     "libelle": "Hauteur du panneau",
+     "consigne": "Tous les panneaux d’une face, sans le cadre.",
+     "unite": "mm",
+     "totemCote": "F"
+    },
+    {
+     "id": "tc-mwyl40tdoyaiav-G",
+     "genre": "cote",
+     "rang": 18,
+     "code": "TG",
+     "ref": "Z1 · TG",
+     "type": "Totem",
+     "libelle": "Largeur du montant",
+     "consigne": "Le montant du cadre vu de face.",
+     "unite": "mm",
+     "totemCote": "G"
+    },
+    {
+     "id": "tc-mwyl40tdoyaiav-H",
+     "genre": "cote",
+     "rang": 19,
+     "code": "TH",
+     "ref": "Z1 · TH",
+     "type": "Totem",
+     "libelle": "Retrait du panneau",
+     "consigne": "Du bord avant du cadre jusqu’à la face du panneau.",
+     "unite": "mm",
+     "totemCote": "H"
+    },
+    {
+     "id": "mwvzvo9q53cy8m",
+     "genre": "cote",
+     "rang": 20,
+     "code": "L",
+     "ref": "Z1 · L",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzto8o7bwyb6",
+     "position": {
+      "x1": 455,
+      "y1": 304,
+      "x2": 522,
+      "y2": 279
+     }
+    },
+    {
+     "id": "mwvzvri250ufe2",
+     "genre": "cote",
+     "rang": 21,
+     "code": "H1",
+     "ref": "Z1 · H1",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzto8o7bwyb6",
+     "position": {
+      "x1": 505,
+      "y1": 259,
+      "x2": 507,
+      "y2": 489
+     }
+    },
+    {
+     "id": "mwvzwxiv5u9ojc",
+     "genre": "cote",
+     "rang": 22,
+     "code": "H2",
+     "ref": "Z1 · H2",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzto8o7bwyb6",
+     "position": {
+      "x1": 472,
+      "y1": 274,
+      "x2": 471,
+      "y2": 497
+     }
+    },
+    {
+     "id": "mwvzxc9soaanmu",
+     "genre": "cote",
+     "rang": 23,
+     "code": "H3",
+     "ref": "Z1 · H3",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "Mesurer la hauteur totale, à 10 cm près au plus.",
+     "unite": "mm",
+     "photo": "mwvzto8o7bwyb6",
+     "position": {
+      "x1": 446,
+      "y1": 129,
+      "x2": 443,
+      "y2": 813
+     }
+    },
+    {
+     "id": "mwvzviv6hzohms",
+     "genre": "cote",
+     "rang": 24,
+     "code": "G",
+     "ref": "Z1 · G",
+     "type": "Distance au sol",
+     "libelle": "Distance au sol",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzto8o7bwyb6",
+     "position": {
+      "x1": 509,
+      "y1": 491,
+      "x2": 510,
+      "y2": 837
+     }
+    },
+    {
+     "id": "mwvzx1f88qw95v",
+     "genre": "cote",
+     "rang": 25,
+     "code": "E",
+     "ref": "Z1 · E",
+     "type": "Épaisseur",
+     "libelle": "Épaisseur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzto8o7bwyb6",
+     "position": {
+      "x1": 520,
+      "y1": 451,
+      "x2": 539,
+      "y2": 448
+     }
+    },
+    {
+     "id": "mwvzxnlnjbiue8",
+     "genre": "photo",
+     "rang": 26,
+     "code": "Photo 1",
+     "ref": "Z1 · Photo 1",
+     "numero": 1,
+     "libelle": "",
+     "consigne": "Photographier l'enseigne de profil pour voir sa structure intérieure.",
+     "photo": "mwvzto8o7bwyb6",
+     "position": {
+      "x": 531,
+      "y": 487
+     }
+    },
+    {
+     "id": "mwvzxpfj4ablvy",
+     "genre": "photo",
+     "rang": 27,
+     "code": "Photo 2",
+     "ref": "Z1 · Photo 2",
+     "numero": 2,
+     "libelle": "",
+     "consigne": "Photographier la structure au sol, un maximum de vues sur ce lieu.",
+     "photo": "mwvzto8o7bwyb6",
+     "position": {
+      "x": 461,
+      "y": 804
+     }
+    },
+    {
+     "id": "mwvzxr9f703rqn",
+     "genre": "photo",
+     "rang": 28,
+     "code": "Photo 3",
+     "ref": "Z1 · Photo 3",
+     "numero": 3,
+     "libelle": "",
+     "consigne": "Photographier l'enseigne entière, vue d'ensemble.",
+     "photo": "mwvzto8o7bwyb6",
+     "position": {
+      "x": 484,
+      "y": 334
+     }
+    }
+   ]
+  },
+  {
+   "id": "mwyl4cjduls79n",
+   "numero": 2,
+   "code": "Z2",
+   "nom": "",
+   "titre": "vue 2",
+   "proposee": false,
+   "ensemble": false,
+   "totem": false,
+   "vues": [
+    {
+     "photo": "mwvztu14044l25",
+     "x": 112,
+     "y": 103,
+     "w": 673,
+     "h": 463
+    }
+   ],
+   "elements": [
+    {
+     "id": "mwvzy1euiwnmmp",
+     "genre": "cote",
+     "rang": 1,
+     "code": "H1",
+     "ref": "Z2 · H1",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x1": 136,
+      "y1": 414,
+      "x2": 219,
+      "y2": 417
+     }
+    },
+    {
+     "id": "mwvzy4ch8i9xz2",
+     "genre": "cote",
+     "rang": 2,
+     "code": "H2",
+     "ref": "Z2 · H2",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x1": 220,
+      "y1": 440,
+      "x2": 384,
+      "y2": 443
+     }
+    },
+    {
+     "id": "mwvzy6sm75cc5q",
+     "genre": "cote",
+     "rang": 3,
+     "code": "H3",
+     "ref": "Z2 · H3",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x1": 387,
+      "y1": 422,
+      "x2": 467,
+      "y2": 423
+     }
+    },
+    {
+     "id": "mwvzy9z8mixyhy",
+     "genre": "cote",
+     "rang": 4,
+     "code": "H4",
+     "ref": "Z2 · H4",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x1": 467,
+      "y1": 406,
+      "x2": 630,
+      "y2": 405
+     }
+    },
+    {
+     "id": "mwvzycp8gfx8ir",
+     "genre": "cote",
+     "rang": 5,
+     "code": "H5",
+     "ref": "Z2 · H5",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x1": 630,
+      "y1": 385,
+      "x2": 761,
+      "y2": 383
+     }
+    },
+    {
+     "id": "mwvzyg3oh8qizb",
+     "genre": "cote",
+     "rang": 6,
+     "code": "H6",
+     "ref": "Z2 · H6",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x1": 536,
+      "y1": 328,
+      "x2": 535,
+      "y2": 542
+     }
+    },
+    {
+     "id": "mwvzyikngtge6r",
+     "genre": "cote",
+     "rang": 7,
+     "code": "H7",
+     "ref": "Z2 · H7",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x1": 312,
+      "y1": 327,
+      "x2": 306,
+      "y2": 538
+     }
+    },
+    {
+     "id": "mwvzymbf5gw10k",
+     "genre": "cote",
+     "rang": 8,
+     "code": "H8",
+     "ref": "Z2 · H8",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x1": 499,
+      "y1": 127,
+      "x2": 499,
+      "y2": 206
+     }
+    },
+    {
+     "id": "mwvzyok32egto4",
+     "genre": "cote",
+     "rang": 9,
+     "code": "H9",
+     "ref": "Z2 · H9",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x1": 490,
+      "y1": 138,
+      "x2": 735,
+      "y2": 140
+     }
+    },
+    {
+     "id": "mwvzyqhg2pjdev",
+     "genre": "cote",
+     "rang": 10,
+     "code": "H10",
+     "ref": "Z2 · H10",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x1": 432,
+      "y1": 163,
+      "x2": 199,
+      "y2": 161
+     }
+    },
+    {
+     "id": "mwvzysglgpp2qx",
+     "genre": "cote",
+     "rang": 11,
+     "code": "H11",
+     "ref": "Z2 · H11",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x1": 407,
+      "y1": 137,
+      "x2": 408,
+      "y2": 186
+     }
+    },
+    {
+     "id": "mwvzzxpmqqal6o",
+     "genre": "cote",
+     "rang": 12,
+     "code": "H12",
+     "ref": "Z2 · H12",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x1": 542,
+      "y1": 205,
+      "x2": 539,
+      "y2": 327
+     }
+    },
+    {
+     "id": "mwvzzmv7rd56ku",
+     "genre": "photo",
+     "rang": 13,
+     "code": "Photo 4",
+     "ref": "Z2 · Photo 4",
+     "numero": 4,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x": 438,
+      "y": 192
+     }
+    },
+    {
+     "id": "mwvzzp7t48w5v0",
+     "genre": "photo",
+     "rang": 14,
+     "code": "Photo 5",
+     "ref": "Z2 · Photo 5",
+     "numero": 5,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x": 380,
+      "y": 486
+     }
+    },
+    {
+     "id": "mwvzzqmwj1p1o0",
+     "genre": "photo",
+     "rang": 15,
+     "code": "Photo 6",
+     "ref": "Z2 · Photo 6",
+     "numero": 6,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x": 753,
+      "y": 214
+     }
+    },
+    {
+     "id": "mwvzyv992fyfoi",
+     "genre": "question",
+     "rang": 16,
+     "code": "Q1",
+     "ref": "Z2 · Q1",
+     "numero": 1,
+     "libelle": "Regarder comment l'enseigne est fixée et faire des photos de la structure",
+     "attendu": "oui_non",
+     "choix": [],
+     "photo": "mwvztu14044l25",
+     "position": {
+      "x": 561,
+      "y": 190
+     }
+    }
+   ]
+  },
+  {
+   "id": "mwyl4kxmlctsvp",
+   "numero": 3,
+   "code": "Z3",
+   "nom": "",
+   "titre": "vue 3",
+   "proposee": false,
+   "ensemble": false,
+   "totem": true,
+   "vues": [
+    {
+     "photo": "mwvztxb53nxy8p",
+     "x": 378,
+     "y": 122,
+     "w": 191,
+     "h": 644
+    }
+   ],
+   "elements": [
+    {
+     "id": "tt-mwyl4kxmlctsvp-faces",
+     "genre": "question",
+     "rang": 1,
+     "code": "T1",
+     "ref": "Z3 · T1",
+     "numero": 1,
+     "libelle": "Totem : combien de faces ?",
+     "attendu": "choix",
+     "choix": [
+      "1 face",
+      "2 faces",
+      "3 faces",
+      "4 faces ou plus"
+     ],
+     "valeurs": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "totem": "faces"
+    },
+    {
+     "id": "tt-mwyl4kxmlctsvp-structure",
+     "genre": "question",
+     "rang": 2,
+     "code": "T2",
+     "ref": "Z3 · T2",
+     "numero": 2,
+     "libelle": "Totem : comment est-il construit ?",
+     "attendu": "choix",
+     "choix": [
+      "Cadre + panneau",
+      "Caisson plein",
+      "Mât central"
+     ],
+     "valeurs": [
+      "cadre",
+      "caisson",
+      "mat"
+     ],
+     "totem": "structure"
+    },
+    {
+     "id": "tt-mwyl4kxmlctsvp-npan",
+     "genre": "question",
+     "rang": 3,
+     "code": "T3",
+     "ref": "Z3 · T3",
+     "numero": 3,
+     "libelle": "Totem : combien de panneaux par face ?",
+     "attendu": "choix",
+     "choix": [
+      "1 panneau",
+      "2 panneaux",
+      "3 panneaux",
+      "4 panneaux ou plus"
+     ],
+     "valeurs": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "totem": "npan"
+    },
+    {
+     "id": "tt-mwyl4kxmlctsvp-tenue",
+     "genre": "question",
+     "rang": 4,
+     "code": "T4",
+     "ref": "Z3 · T4",
+     "numero": 4,
+     "libelle": "Totem : comment tiennent les panneaux ?",
+     "attendu": "choix",
+     "choix": [
+      "Dans le cadre",
+      "Vissés devant",
+      "Glissés en rail",
+      "Toile tendue",
+      "Face plexi"
+     ],
+     "valeurs": [
+      "feuil",
+      "vis",
+      "rail",
+      "toile",
+      "plexi"
+     ],
+     "totem": "tenue"
+    },
+    {
+     "id": "tt-mwyl4kxmlctsvp-trav",
+     "genre": "question",
+     "rang": 5,
+     "code": "T5",
+     "ref": "Z3 · T5",
+     "numero": 5,
+     "libelle": "Totem : des traverses entre les panneaux ?",
+     "attendu": "choix",
+     "choix": [
+      "Aucune",
+      "Visibles",
+      "Cachées"
+     ],
+     "valeurs": [
+      "non",
+      "vis",
+      "cach"
+     ],
+     "totem": "trav"
+    },
+    {
+     "id": "tt-mwyl4kxmlctsvp-npot",
+     "genre": "question",
+     "rang": 6,
+     "code": "T6",
+     "ref": "Z3 · T6",
+     "numero": 6,
+     "libelle": "Totem : combien de poteaux ?",
+     "attendu": "choix",
+     "choix": [
+      "1 poteau",
+      "2 poteaux",
+      "3 poteaux ou plus"
+     ],
+     "valeurs": [
+      "1",
+      "2",
+      "3"
+     ],
+     "totem": "npot"
+    },
+    {
+     "id": "tt-mwyl4kxmlctsvp-section",
+     "genre": "question",
+     "rang": 7,
+     "code": "T7",
+     "ref": "Z3 · T7",
+     "numero": 7,
+     "libelle": "Totem : forme des poteaux ?",
+     "attendu": "choix",
+     "choix": [
+      "Ronde",
+      "Carrée",
+      "Rectangulaire"
+     ],
+     "valeurs": [
+      "ronde",
+      "carree",
+      "rect"
+     ],
+     "totem": "section"
+    },
+    {
+     "id": "tt-mwyl4kxmlctsvp-fix",
+     "genre": "question",
+     "rang": 8,
+     "code": "T8",
+     "ref": "Z3 · T8",
+     "numero": 8,
+     "libelle": "Totem : comment est-il fixé au sol ?",
+     "attendu": "choix",
+     "choix": [
+      "Platines boulonnées",
+      "Massif béton",
+      "Scellé dans le sol",
+      "Fixation non visible"
+     ],
+     "valeurs": [
+      "platine",
+      "massif",
+      "scelle",
+      "inconnu"
+     ],
+     "totem": "fix"
+    },
+    {
+     "id": "tt-mwyl4kxmlctsvp-ecl",
+     "genre": "question",
+     "rang": 9,
+     "code": "T9",
+     "ref": "Z3 · T9",
+     "numero": 9,
+     "libelle": "Totem : est-il éclairé ?",
+     "attendu": "choix",
+     "choix": [
+      "Pas éclairé",
+      "De l’intérieur",
+      "Par des spots"
+     ],
+     "valeurs": [
+      "non",
+      "int",
+      "spots"
+     ],
+     "totem": "ecl"
+    },
+    {
+     "id": "tt-mwyl4kxmlctsvp-tete",
+     "genre": "question",
+     "rang": 10,
+     "code": "T10",
+     "ref": "Z3 · T10",
+     "numero": 10,
+     "libelle": "Totem : le haut du totem ?",
+     "attendu": "choix",
+     "choix": [
+      "Capot",
+      "Cadre apparent",
+      "Rien"
+     ],
+     "valeurs": [
+      "capot",
+      "cadre",
+      "rien"
+     ],
+     "totem": "tete"
+    },
+    {
+     "id": "ts-mwyl4kxmlctsvp",
+     "genre": "question",
+     "rang": 11,
+     "code": "TS",
+     "ref": "Z3 · TS",
+     "numero": 11,
+     "libelle": "Totem à 3 faces ou plus : schéma vu de dessus, coté, à photographier",
+     "attendu": "schema",
+     "choix": [],
+     "totemSchema": true
+    },
+    {
+     "id": "tc-mwyl4kxmlctsvp-A",
+     "genre": "cote",
+     "rang": 12,
+     "code": "TA",
+     "ref": "Z3 · TA",
+     "type": "Totem",
+     "libelle": "Hauteur du cadre",
+     "consigne": "Du bas du cadre jusqu’en haut, à l’extérieur.",
+     "unite": "mm",
+     "totemCote": "A"
+    },
+    {
+     "id": "tc-mwyl4kxmlctsvp-B",
+     "genre": "cote",
+     "rang": 13,
+     "code": "TB",
+     "ref": "Z3 · TB",
+     "type": "Totem",
+     "libelle": "Largeur du cadre",
+     "consigne": "D’un bord extérieur à l’autre.",
+     "unite": "mm",
+     "totemCote": "B"
+    },
+    {
+     "id": "tc-mwyl4kxmlctsvp-C",
+     "genre": "cote",
+     "rang": 14,
+     "code": "TC",
+     "ref": "Z3 · TC",
+     "type": "Totem",
+     "libelle": "Épaisseur du cadre",
+     "consigne": "Le cadre vu de côté, de l’avant à l’arrière.",
+     "unite": "mm",
+     "totemCote": "C"
+    },
+    {
+     "id": "tc-mwyl4kxmlctsvp-D",
+     "genre": "cote",
+     "rang": 15,
+     "code": "TD",
+     "ref": "Z3 · TD",
+     "type": "Totem",
+     "libelle": "Hauteur sous cadre",
+     "consigne": "Du sol jusqu’au bas du cadre.",
+     "unite": "mm",
+     "totemCote": "D"
+    },
+    {
+     "id": "tc-mwyl4kxmlctsvp-E",
+     "genre": "cote",
+     "rang": 16,
+     "code": "TE",
+     "ref": "Z3 · TE",
+     "type": "Totem",
+     "libelle": "Largeur du panneau",
+     "consigne": "Le panneau seul, sans le cadre.",
+     "unite": "mm",
+     "totemCote": "E"
+    },
+    {
+     "id": "tc-mwyl4kxmlctsvp-F",
+     "genre": "cote",
+     "rang": 17,
+     "code": "TF",
+     "ref": "Z3 · TF",
+     "type": "Totem",
+     "libelle": "Hauteur du panneau",
+     "consigne": "Tous les panneaux d’une face, sans le cadre.",
+     "unite": "mm",
+     "totemCote": "F"
+    },
+    {
+     "id": "tc-mwyl4kxmlctsvp-G",
+     "genre": "cote",
+     "rang": 18,
+     "code": "TG",
+     "ref": "Z3 · TG",
+     "type": "Totem",
+     "libelle": "Largeur du montant",
+     "consigne": "Le montant du cadre vu de face.",
+     "unite": "mm",
+     "totemCote": "G"
+    },
+    {
+     "id": "tc-mwyl4kxmlctsvp-H",
+     "genre": "cote",
+     "rang": 19,
+     "code": "TH",
+     "ref": "Z3 · TH",
+     "type": "Totem",
+     "libelle": "Retrait du panneau",
+     "consigne": "Du bord avant du cadre jusqu’à la face du panneau.",
+     "unite": "mm",
+     "totemCote": "H"
+    },
+    {
+     "id": "mww0078dhvtzgi",
+     "genre": "cote",
+     "rang": 20,
+     "code": "L",
+     "ref": "Z3 · L",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztxb53nxy8p",
+     "position": {
+      "x1": 402,
+      "y1": 238,
+      "x2": 545,
+      "y2": 269
+     }
+    },
+    {
+     "id": "mww004gwww20kh",
+     "genre": "cote",
+     "rang": 21,
+     "code": "H",
+     "ref": "Z3 · H",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztxb53nxy8p",
+     "position": {
+      "x1": 470,
+      "y1": 146,
+      "x2": 470,
+      "y2": 732
+     }
+    },
+    {
+     "id": "mww00hcykv212f",
+     "genre": "cote",
+     "rang": 22,
+     "code": "E1",
+     "ref": "Z3 · E1",
+     "type": "Épaisseur",
+     "libelle": "Épaisseur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztxb53nxy8p",
+     "position": {
+      "x1": 389,
+      "y1": 363,
+      "x2": 402,
+      "y2": 374
+     }
+    },
+    {
+     "id": "mww046e0uo7s8l",
+     "genre": "cote",
+     "rang": 23,
+     "code": "E2",
+     "ref": "Z3 · E2",
+     "type": "Épaisseur",
+     "libelle": "Épaisseur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztxb53nxy8p",
+     "position": {
+      "x1": 414,
+      "y1": 496,
+      "x2": 536,
+      "y2": 510
+     }
+    },
+    {
+     "id": "mww04a3u5ud7t0",
+     "genre": "cote",
+     "rang": 24,
+     "code": "E3",
+     "ref": "Z3 · E3",
+     "type": "Épaisseur",
+     "libelle": "Épaisseur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztxb53nxy8p",
+     "position": {
+      "x1": 504,
+      "y1": 173,
+      "x2": 507,
+      "y2": 677
+     }
+    },
+    {
+     "id": "mww00oahbxtxgr",
+     "genre": "question",
+     "rang": 25,
+     "code": "Q2",
+     "ref": "Z3 · Q2",
+     "numero": 2,
+     "libelle": "Bien prendre des photos de la fixation au sol et prendre précisément les cotes (largeur et hauteur extérieures et intérieures)",
+     "attendu": "oui_non",
+     "choix": [],
+     "photo": "mwvztxb53nxy8p",
+     "position": {
+      "x": 510,
+      "y": 728
+     }
+    }
+   ]
+  },
+  {
+   "id": "mwyl4w71jdr0sa",
+   "numero": 4,
+   "code": "Z4",
+   "nom": "",
+   "titre": "vue 4",
+   "proposee": false,
+   "ensemble": false,
+   "totem": false,
+   "vues": [
+    {
+     "photo": "mwvztzki7q3v0r",
+     "x": 290,
+     "y": 19,
+     "w": 351,
+     "h": 427
+    }
+   ],
+   "elements": [
+    {
+     "id": "mww04egyf8ajzh",
+     "genre": "cote",
+     "rang": 1,
+     "code": "E1",
+     "ref": "Z4 · E1",
+     "type": "Épaisseur",
+     "libelle": "Épaisseur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztzki7q3v0r",
+     "position": {
+      "x1": 318,
+      "y1": 111,
+      "x2": 609,
+      "y2": 57
+     }
+    },
+    {
+     "id": "mww04ggwlst5mg",
+     "genre": "cote",
+     "rang": 2,
+     "code": "E2",
+     "ref": "Z4 · E2",
+     "type": "Épaisseur",
+     "libelle": "Épaisseur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztzki7q3v0r",
+     "position": {
+      "x1": 613,
+      "y1": 45,
+      "x2": 615,
+      "y2": 420
+     }
+    },
+    {
+     "id": "mww04nh9zcl17k",
+     "genre": "question",
+     "rang": 3,
+     "code": "Q3",
+     "ref": "Z4 · Q3",
+     "numero": 3,
+     "libelle": "J'ai besoin de savoir de quelle matière il s'agit ; s'il y a une épaisseur, la prendre bien et faire des photos",
+     "attendu": "oui_non",
+     "choix": [],
+     "photo": "mwvztzki7q3v0r",
+     "position": {
+      "x": 429,
+      "y": 230
+     }
+    },
+    {
+     "id": "mww06e7gz937r8",
+     "genre": "question",
+     "rang": 4,
+     "code": "Q4",
+     "ref": "Z4 · Q4",
+     "numero": 4,
+     "libelle": "Me dire si l'accès est simple pour la dépose ou la pose",
+     "attendu": "oui_non",
+     "choix": [],
+     "photo": "mwvztzki7q3v0r",
+     "position": {
+      "x": 304,
+      "y": 422
+     }
+    }
+   ]
+  },
+  {
+   "id": "mwyl501e2h8c37",
+   "numero": 5,
+   "code": "Z5",
+   "nom": "",
+   "titre": "vue 5",
+   "proposee": false,
+   "ensemble": false,
+   "totem": true,
+   "vues": [
+    {
+     "photo": "mwvzu60jr2yqrf",
+     "x": 640,
+     "y": 262,
+     "w": 107,
+     "h": 205
+    }
+   ],
+   "elements": [
+    {
+     "id": "tt-mwyl501e2h8c37-faces",
+     "genre": "question",
+     "rang": 1,
+     "code": "T1",
+     "ref": "Z5 · T1",
+     "numero": 1,
+     "libelle": "Totem : combien de faces ?",
+     "attendu": "choix",
+     "choix": [
+      "1 face",
+      "2 faces",
+      "3 faces",
+      "4 faces ou plus"
+     ],
+     "valeurs": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "totem": "faces"
+    },
+    {
+     "id": "tt-mwyl501e2h8c37-structure",
+     "genre": "question",
+     "rang": 2,
+     "code": "T2",
+     "ref": "Z5 · T2",
+     "numero": 2,
+     "libelle": "Totem : comment est-il construit ?",
+     "attendu": "choix",
+     "choix": [
+      "Cadre + panneau",
+      "Caisson plein",
+      "Mât central"
+     ],
+     "valeurs": [
+      "cadre",
+      "caisson",
+      "mat"
+     ],
+     "totem": "structure"
+    },
+    {
+     "id": "tt-mwyl501e2h8c37-npan",
+     "genre": "question",
+     "rang": 3,
+     "code": "T3",
+     "ref": "Z5 · T3",
+     "numero": 3,
+     "libelle": "Totem : combien de panneaux par face ?",
+     "attendu": "choix",
+     "choix": [
+      "1 panneau",
+      "2 panneaux",
+      "3 panneaux",
+      "4 panneaux ou plus"
+     ],
+     "valeurs": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "totem": "npan"
+    },
+    {
+     "id": "tt-mwyl501e2h8c37-tenue",
+     "genre": "question",
+     "rang": 4,
+     "code": "T4",
+     "ref": "Z5 · T4",
+     "numero": 4,
+     "libelle": "Totem : comment tiennent les panneaux ?",
+     "attendu": "choix",
+     "choix": [
+      "Dans le cadre",
+      "Vissés devant",
+      "Glissés en rail",
+      "Toile tendue",
+      "Face plexi"
+     ],
+     "valeurs": [
+      "feuil",
+      "vis",
+      "rail",
+      "toile",
+      "plexi"
+     ],
+     "totem": "tenue"
+    },
+    {
+     "id": "tt-mwyl501e2h8c37-trav",
+     "genre": "question",
+     "rang": 5,
+     "code": "T5",
+     "ref": "Z5 · T5",
+     "numero": 5,
+     "libelle": "Totem : des traverses entre les panneaux ?",
+     "attendu": "choix",
+     "choix": [
+      "Aucune",
+      "Visibles",
+      "Cachées"
+     ],
+     "valeurs": [
+      "non",
+      "vis",
+      "cach"
+     ],
+     "totem": "trav"
+    },
+    {
+     "id": "tt-mwyl501e2h8c37-npot",
+     "genre": "question",
+     "rang": 6,
+     "code": "T6",
+     "ref": "Z5 · T6",
+     "numero": 6,
+     "libelle": "Totem : combien de poteaux ?",
+     "attendu": "choix",
+     "choix": [
+      "1 poteau",
+      "2 poteaux",
+      "3 poteaux ou plus"
+     ],
+     "valeurs": [
+      "1",
+      "2",
+      "3"
+     ],
+     "totem": "npot"
+    },
+    {
+     "id": "tt-mwyl501e2h8c37-section",
+     "genre": "question",
+     "rang": 7,
+     "code": "T7",
+     "ref": "Z5 · T7",
+     "numero": 7,
+     "libelle": "Totem : forme des poteaux ?",
+     "attendu": "choix",
+     "choix": [
+      "Ronde",
+      "Carrée",
+      "Rectangulaire"
+     ],
+     "valeurs": [
+      "ronde",
+      "carree",
+      "rect"
+     ],
+     "totem": "section"
+    },
+    {
+     "id": "tt-mwyl501e2h8c37-fix",
+     "genre": "question",
+     "rang": 8,
+     "code": "T8",
+     "ref": "Z5 · T8",
+     "numero": 8,
+     "libelle": "Totem : comment est-il fixé au sol ?",
+     "attendu": "choix",
+     "choix": [
+      "Platines boulonnées",
+      "Massif béton",
+      "Scellé dans le sol",
+      "Fixation non visible"
+     ],
+     "valeurs": [
+      "platine",
+      "massif",
+      "scelle",
+      "inconnu"
+     ],
+     "totem": "fix"
+    },
+    {
+     "id": "tt-mwyl501e2h8c37-ecl",
+     "genre": "question",
+     "rang": 9,
+     "code": "T9",
+     "ref": "Z5 · T9",
+     "numero": 9,
+     "libelle": "Totem : est-il éclairé ?",
+     "attendu": "choix",
+     "choix": [
+      "Pas éclairé",
+      "De l’intérieur",
+      "Par des spots"
+     ],
+     "valeurs": [
+      "non",
+      "int",
+      "spots"
+     ],
+     "totem": "ecl"
+    },
+    {
+     "id": "tt-mwyl501e2h8c37-tete",
+     "genre": "question",
+     "rang": 10,
+     "code": "T10",
+     "ref": "Z5 · T10",
+     "numero": 10,
+     "libelle": "Totem : le haut du totem ?",
+     "attendu": "choix",
+     "choix": [
+      "Capot",
+      "Cadre apparent",
+      "Rien"
+     ],
+     "valeurs": [
+      "capot",
+      "cadre",
+      "rien"
+     ],
+     "totem": "tete"
+    },
+    {
+     "id": "ts-mwyl501e2h8c37",
+     "genre": "question",
+     "rang": 11,
+     "code": "TS",
+     "ref": "Z5 · TS",
+     "numero": 11,
+     "libelle": "Totem à 3 faces ou plus : schéma vu de dessus, coté, à photographier",
+     "attendu": "schema",
+     "choix": [],
+     "totemSchema": true
+    },
+    {
+     "id": "tc-mwyl501e2h8c37-A",
+     "genre": "cote",
+     "rang": 12,
+     "code": "TA",
+     "ref": "Z5 · TA",
+     "type": "Totem",
+     "libelle": "Hauteur du cadre",
+     "consigne": "Du bas du cadre jusqu’en haut, à l’extérieur.",
+     "unite": "mm",
+     "totemCote": "A"
+    },
+    {
+     "id": "tc-mwyl501e2h8c37-B",
+     "genre": "cote",
+     "rang": 13,
+     "code": "TB",
+     "ref": "Z5 · TB",
+     "type": "Totem",
+     "libelle": "Largeur du cadre",
+     "consigne": "D’un bord extérieur à l’autre.",
+     "unite": "mm",
+     "totemCote": "B"
+    },
+    {
+     "id": "tc-mwyl501e2h8c37-C",
+     "genre": "cote",
+     "rang": 14,
+     "code": "TC",
+     "ref": "Z5 · TC",
+     "type": "Totem",
+     "libelle": "Épaisseur du cadre",
+     "consigne": "Le cadre vu de côté, de l’avant à l’arrière.",
+     "unite": "mm",
+     "totemCote": "C"
+    },
+    {
+     "id": "tc-mwyl501e2h8c37-D",
+     "genre": "cote",
+     "rang": 15,
+     "code": "TD",
+     "ref": "Z5 · TD",
+     "type": "Totem",
+     "libelle": "Hauteur sous cadre",
+     "consigne": "Du sol jusqu’au bas du cadre.",
+     "unite": "mm",
+     "totemCote": "D"
+    },
+    {
+     "id": "tc-mwyl501e2h8c37-E",
+     "genre": "cote",
+     "rang": 16,
+     "code": "TE",
+     "ref": "Z5 · TE",
+     "type": "Totem",
+     "libelle": "Largeur du panneau",
+     "consigne": "Le panneau seul, sans le cadre.",
+     "unite": "mm",
+     "totemCote": "E"
+    },
+    {
+     "id": "tc-mwyl501e2h8c37-F",
+     "genre": "cote",
+     "rang": 17,
+     "code": "TF",
+     "ref": "Z5 · TF",
+     "type": "Totem",
+     "libelle": "Hauteur du panneau",
+     "consigne": "Tous les panneaux d’une face, sans le cadre.",
+     "unite": "mm",
+     "totemCote": "F"
+    },
+    {
+     "id": "tc-mwyl501e2h8c37-G",
+     "genre": "cote",
+     "rang": 18,
+     "code": "TG",
+     "ref": "Z5 · TG",
+     "type": "Totem",
+     "libelle": "Largeur du montant",
+     "consigne": "Le montant du cadre vu de face.",
+     "unite": "mm",
+     "totemCote": "G"
+    },
+    {
+     "id": "tc-mwyl501e2h8c37-H",
+     "genre": "cote",
+     "rang": 19,
+     "code": "TH",
+     "ref": "Z5 · TH",
+     "type": "Totem",
+     "libelle": "Retrait du panneau",
+     "consigne": "Du bord avant du cadre jusqu’à la face du panneau.",
+     "unite": "mm",
+     "totemCote": "H"
+    },
+    {
+     "id": "mww07dgtt3y1pb",
+     "genre": "cote",
+     "rang": 20,
+     "code": "G1",
+     "ref": "Z5 · G1",
+     "type": "Distance au sol",
+     "libelle": "Distance au sol",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzu60jr2yqrf",
+     "position": {
+      "x1": 673,
+      "y1": 292,
+      "x2": 712,
+      "y2": 288
+     }
+    },
+    {
+     "id": "mww07h9dd5xlzd",
+     "genre": "cote",
+     "rang": 21,
+     "code": "G2",
+     "ref": "Z5 · G2",
+     "type": "Distance au sol",
+     "libelle": "Distance au sol",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzu60jr2yqrf",
+     "position": {
+      "x1": 680,
+      "y1": 318,
+      "x2": 707,
+      "y2": 315
+     }
+    },
+    {
+     "id": "mww07kjt0f0f7q",
+     "genre": "cote",
+     "rang": 22,
+     "code": "G3",
+     "ref": "Z5 · G3",
+     "type": "Distance au sol",
+     "libelle": "Distance au sol",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzu60jr2yqrf",
+     "position": {
+      "x1": 717,
+      "y1": 286,
+      "x2": 723,
+      "y2": 443
+     }
+    },
+    {
+     "id": "mww07ouzk3tmgh",
+     "genre": "cote",
+     "rang": 23,
+     "code": "G4",
+     "ref": "Z5 · G4",
+     "type": "Distance au sol",
+     "libelle": "Distance au sol",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzu60jr2yqrf",
+     "position": {
+      "x1": 684,
+      "y1": 298,
+      "x2": 690,
+      "y2": 434
+     }
+    },
+    {
+     "id": "mww07ty57v9tua",
+     "genre": "photo",
+     "rang": 24,
+     "code": "Photo 7",
+     "ref": "Z5 · Photo 7",
+     "numero": 7,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvzu60jr2yqrf",
+     "position": {
+      "x": 706,
+      "y": 428
+     }
+    },
+    {
+     "id": "mww07vaea7cq3e",
+     "genre": "photo",
+     "rang": 25,
+     "code": "Photo 8",
+     "ref": "Z5 · Photo 8",
+     "numero": 8,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvzu60jr2yqrf",
+     "position": {
+      "x": 697,
+      "y": 332
+     }
+    },
+    {
+     "id": "mww07xq470hpt3",
+     "genre": "question",
+     "rang": 26,
+     "code": "Q5",
+     "ref": "Z5 · Q5",
+     "numero": 5,
+     "libelle": "Prendre la fixation au sol et l'épaisseur du totem",
+     "attendu": "oui_non",
+     "choix": [],
+     "photo": "mwvzu60jr2yqrf",
+     "position": {
+      "x": 678,
+      "y": 424
+     }
+    }
+   ]
+  },
+  {
+   "id": "mwyl5er1hkeahf",
+   "numero": 6,
+   "code": "Z6",
+   "nom": "",
+   "titre": "vue 6",
+   "proposee": false,
+   "ensemble": false,
+   "totem": false,
+   "vues": [
+    {
+     "photo": "mwvzux7o0k5xcq",
+     "x": 57,
+     "y": 7,
+     "w": 646,
+     "h": 416
+    }
+   ],
+   "elements": [
+    {
+     "id": "mww09rx7dwa8gb",
+     "genre": "cote",
+     "rang": 1,
+     "code": "L1",
+     "ref": "Z6 · L1",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 213,
+      "y1": 139,
+      "x2": 243,
+      "y2": 140
+     }
+    },
+    {
+     "id": "mww0b2fs6nac00",
+     "genre": "cote",
+     "rang": 2,
+     "code": "L2",
+     "ref": "Z6 · L2",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 502,
+      "y1": 306,
+      "x2": 615,
+      "y2": 305
+     }
+    },
+    {
+     "id": "mww0bbrjq300e2",
+     "genre": "cote",
+     "rang": 3,
+     "code": "L3",
+     "ref": "Z6 · L3",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 611,
+      "y1": 261,
+      "x2": 498,
+      "y2": 258
+     }
+    },
+    {
+     "id": "mww0bhn8zdcka8",
+     "genre": "cote",
+     "rang": 4,
+     "code": "L4",
+     "ref": "Z6 · L4",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 455,
+      "y1": 263,
+      "x2": 259,
+      "y2": 264
+     }
+    },
+    {
+     "id": "mww0d5vz3yodat",
+     "genre": "cote",
+     "rang": 5,
+     "code": "L5",
+     "ref": "Z6 · L5",
+     "type": "Largeur",
+     "libelle": "Largeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 219,
+      "y1": 296,
+      "x2": 244,
+      "y2": 297
+     }
+    },
+    {
+     "id": "mww09vuk0k1nvp",
+     "genre": "cote",
+     "rang": 6,
+     "code": "H1",
+     "ref": "Z6 · H1",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 220,
+      "y1": 174,
+      "x2": 219,
+      "y2": 241
+     }
+    },
+    {
+     "id": "mww0a123rgdvso",
+     "genre": "cote",
+     "rang": 7,
+     "code": "H2",
+     "ref": "Z6 · H2",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 270,
+      "y1": 51,
+      "x2": 268,
+      "y2": 111
+     }
+    },
+    {
+     "id": "mww0b416bzyg8n",
+     "genre": "cote",
+     "rang": 8,
+     "code": "H3",
+     "ref": "Z6 · H3",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 577,
+      "y1": 284,
+      "x2": 576,
+      "y2": 364
+     }
+    },
+    {
+     "id": "mww0b7ob853lau",
+     "genre": "cote",
+     "rang": 9,
+     "code": "H4",
+     "ref": "Z6 · H4",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 530,
+      "y1": 251,
+      "x2": 530,
+      "y2": 279
+     }
+    },
+    {
+     "id": "mww0bf1alegc3a",
+     "genre": "cote",
+     "rang": 10,
+     "code": "H5",
+     "ref": "Z6 · H5",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 273,
+      "y1": 251,
+      "x2": 273,
+      "y2": 276
+     }
+    },
+    {
+     "id": "mww0d7iv83ltwc",
+     "genre": "cote",
+     "rang": 11,
+     "code": "H6",
+     "ref": "Z6 · H6",
+     "type": "Hauteur",
+     "libelle": "Hauteur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 233,
+      "y1": 244,
+      "x2": 225,
+      "y2": 381
+     }
+    },
+    {
+     "id": "mww098r5s1vlyw",
+     "genre": "cote",
+     "rang": 12,
+     "code": "G1",
+     "ref": "Z6 · G1",
+     "type": "Distance au sol",
+     "libelle": "Distance au sol",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 703,
+      "y1": 88,
+      "x2": 57,
+      "y2": 76
+     }
+    },
+    {
+     "id": "mww09baj8hmdne",
+     "genre": "cote",
+     "rang": 13,
+     "code": "G2",
+     "ref": "Z6 · G2",
+     "type": "Distance au sol",
+     "libelle": "Distance au sol",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 148,
+      "y1": 56,
+      "x2": 142,
+      "y2": 99
+     }
+    },
+    {
+     "id": "mww09d26h0pvkz",
+     "genre": "cote",
+     "rang": 14,
+     "code": "G3",
+     "ref": "Z6 · G3",
+     "type": "Distance au sol",
+     "libelle": "Distance au sol",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 96,
+      "y1": 142,
+      "x2": 151,
+      "y2": 143
+     }
+    },
+    {
+     "id": "mww09fhjrxrmkf",
+     "genre": "cote",
+     "rang": 15,
+     "code": "G4",
+     "ref": "Z6 · G4",
+     "type": "Distance au sol",
+     "libelle": "Distance au sol",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 137,
+      "y1": 110,
+      "x2": 133,
+      "y2": 171
+     }
+    },
+    {
+     "id": "mww09nxo37xf0f",
+     "genre": "cote",
+     "rang": 16,
+     "code": "P1",
+     "ref": "Z6 · P1",
+     "type": "Profondeur",
+     "libelle": "Profondeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 208,
+      "y1": 104,
+      "x2": 220,
+      "y2": 112
+     }
+    },
+    {
+     "id": "mww0denrvv8zlt",
+     "genre": "cote",
+     "rang": 17,
+     "code": "P2",
+     "ref": "Z6 · P2",
+     "type": "Profondeur",
+     "libelle": "Profondeur",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x1": 158,
+      "y1": 240,
+      "x2": 183,
+      "y2": 253
+     }
+    },
+    {
+     "id": "mww0dvwi2pqg7r",
+     "genre": "photo",
+     "rang": 18,
+     "code": "Photo 9",
+     "ref": "Z6 · Photo 9",
+     "numero": 9,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x": 348,
+      "y": 54
+     }
+    },
+    {
+     "id": "mww0dyhluaztx8",
+     "genre": "photo",
+     "rang": 19,
+     "code": "Photo 10",
+     "ref": "Z6 · Photo 10",
+     "numero": 10,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x": 380,
+      "y": 250
+     }
+    },
+    {
+     "id": "mww0e075hwptxi",
+     "genre": "photo",
+     "rang": 20,
+     "code": "Photo 11",
+     "ref": "Z6 · Photo 11",
+     "numero": 11,
+     "libelle": "",
+     "consigne": "",
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x": 271,
+      "y": 175
+     }
+    },
+    {
+     "id": "mww0a2vftv83w4",
+     "genre": "question",
+     "rang": 21,
+     "code": "Q6",
+     "ref": "Z6 · Q6",
+     "numero": 6,
+     "libelle": "Il semble y avoir un rebord, prendre les cotes et le prendre en photo",
+     "attendu": "oui_non",
+     "choix": [],
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x": 255,
+      "y": 52
+     }
+    },
+    {
+     "id": "mww0bosfxn1hg3",
+     "genre": "question",
+     "rang": 22,
+     "code": "Q7",
+     "ref": "Z6 · Q7",
+     "numero": 7,
+     "libelle": "Voir la matière et si elle peut être retirée, sinon comment la reproduire",
+     "attendu": "oui_non",
+     "choix": [],
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x": 404,
+      "y": 265
+     }
+    },
+    {
+     "id": "mww0e2ytqaivta",
+     "genre": "question",
+     "rang": 23,
+     "code": "Q8",
+     "ref": "Z6 · Q8",
+     "numero": 8,
+     "libelle": "Voir si toutes les fenêtres sont les mêmes, sinon faire un schéma et coter le schéma",
+     "attendu": "schema",
+     "choix": [],
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x": 116,
+      "y": 294
+     }
+    },
+    {
+     "id": "mww0dp2wwlntib",
+     "genre": "cablage",
+     "rang": 24,
+     "code": "Câblage",
+     "ref": "Z6 · Câblage",
+     "libelle": "Câblage et arrivées électriques",
+     "pointage": true,
+     "champs": [
+      {
+       "id": "a_retenir",
+       "libelle": "À retenir (coffret, passage des câbles…)",
+       "unite": ""
+      }
+     ],
+     "photo": "mwvzux7o0k5xcq",
+     "position": {
+      "x": 91,
+      "y": 29,
+      "w": 530,
+      "h": 48
+     }
+    }
+   ]
+  },
+  {
+   "id": "gen-mwvztzki7q3v0r",
+   "numero": 7,
+   "code": "Z7",
+   "nom": "",
+   "titre": "vue 4, ensemble",
+   "proposee": false,
+   "ensemble": true,
+   "totem": false,
+   "vues": [
+    {
+     "photo": "mwvztzki7q3v0r",
+     "x": 0,
+     "y": 0,
+     "w": 1292,
+     "h": 878
+    }
+   ],
+   "elements": [
+    {
+     "id": "mww04jyzb9navu",
+     "genre": "cote",
+     "rang": 1,
+     "code": "G",
+     "ref": "Z7 · G",
+     "type": "Distance au sol",
+     "libelle": "Distance au sol",
+     "consigne": "",
+     "unite": "mm",
+     "photo": "mwvztzki7q3v0r",
+     "position": {
+      "x1": 382,
+      "y1": 436,
+      "x2": 371,
+      "y2": 754
+     }
+    }
+   ]
+  }
+ ],
+ "cablageGeneral": null
+}
