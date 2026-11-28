@@ -2,11 +2,11 @@
  "format": "fiche-survey",
  "schema": 1,
  "moteur": 11,
- "exporteLe": "2026-11-27T06:14:22.230Z",
+ "exporteLe": "2026-11-28T14:44:16.761Z",
  "fiche": {
   "id": "mwvzsrnr89t987",
   "version": 5,
-  "empreinte": "8a87018d",
+  "empreinte": "60ed2539",
   "pr": "PR-003651",
   "dossier": "CROMOLOGY - ZOLPAN ROSNY-SOUS-BOIS - SURVEY 2027",
   "enseigne": "Cromology",
@@ -79,8 +79,8 @@
    "id": "mwyl40tdoyaiav",
    "numero": 1,
    "code": "Z1",
-   "nom": "",
-   "titre": "vue 1",
+   "nom": "Zone garage",
+   "titre": "Zone garage",
    "proposee": false,
    "ensemble": false,
    "totem": true,
@@ -327,9 +327,24 @@
      "totemSchema": true
     },
     {
+     "id": "tv-mwyl40tdoyaiav",
+     "genre": "question",
+     "rang": 12,
+     "code": "TV",
+     "ref": "Z1 · TV",
+     "numero": 12,
+     "libelle": "Totem : ce dessin ressemble-t-il au totem ?",
+     "attendu": "choix",
+     "choix": [
+      "Oui, c’est bien ça",
+      "Non, je passe en mode photo"
+     ],
+     "totemOk": true
+    },
+    {
      "id": "tc-mwyl40tdoyaiav-A",
      "genre": "cote",
-     "rang": 12,
+     "rang": 13,
      "code": "TA",
      "ref": "Z1 · TA",
      "type": "Totem",
@@ -341,7 +356,7 @@
     {
      "id": "tc-mwyl40tdoyaiav-B",
      "genre": "cote",
-     "rang": 13,
+     "rang": 14,
      "code": "TB",
      "ref": "Z1 · TB",
      "type": "Totem",
@@ -353,7 +368,7 @@
     {
      "id": "tc-mwyl40tdoyaiav-C",
      "genre": "cote",
-     "rang": 14,
+     "rang": 15,
      "code": "TC",
      "ref": "Z1 · TC",
      "type": "Totem",
@@ -365,7 +380,7 @@
     {
      "id": "tc-mwyl40tdoyaiav-D",
      "genre": "cote",
-     "rang": 15,
+     "rang": 16,
      "code": "TD",
      "ref": "Z1 · TD",
      "type": "Totem",
@@ -377,7 +392,7 @@
     {
      "id": "tc-mwyl40tdoyaiav-E",
      "genre": "cote",
-     "rang": 16,
+     "rang": 17,
      "code": "TE",
      "ref": "Z1 · TE",
      "type": "Totem",
@@ -389,7 +404,7 @@
     {
      "id": "tc-mwyl40tdoyaiav-F",
      "genre": "cote",
-     "rang": 17,
+     "rang": 18,
      "code": "TF",
      "ref": "Z1 · TF",
      "type": "Totem",
@@ -401,7 +416,7 @@
     {
      "id": "tc-mwyl40tdoyaiav-G",
      "genre": "cote",
-     "rang": 18,
+     "rang": 19,
      "code": "TG",
      "ref": "Z1 · TG",
      "type": "Totem",
@@ -413,7 +428,7 @@
     {
      "id": "tc-mwyl40tdoyaiav-H",
      "genre": "cote",
-     "rang": 19,
+     "rang": 20,
      "code": "TH",
      "ref": "Z1 · TH",
      "type": "Totem",
@@ -425,7 +440,7 @@
     {
      "id": "mwvzvo9q53cy8m",
      "genre": "cote",
-     "rang": 20,
+     "rang": 21,
      "code": "L",
      "ref": "Z1 · L",
      "type": "Largeur",
@@ -443,7 +458,7 @@
     {
      "id": "mwvzvri250ufe2",
      "genre": "cote",
-     "rang": 21,
+     "rang": 22,
      "code": "H1",
      "ref": "Z1 · H1",
      "type": "Hauteur",
@@ -461,7 +476,7 @@
     {
      "id": "mwvzwxiv5u9ojc",
      "genre": "cote",
-     "rang": 22,
+     "rang": 23,
      "code": "H2",
      "ref": "Z1 · H2",
      "type": "Hauteur",
@@ -479,7 +494,7 @@
     {
      "id": "mwvzxc9soaanmu",
      "genre": "cote",
-     "rang": 23,
+     "rang": 24,
      "code": "H3",
      "ref": "Z1 · H3",
      "type": "Hauteur",
@@ -497,7 +512,7 @@
     {
      "id": "mwvzviv6hzohms",
      "genre": "cote",
-     "rang": 24,
+     "rang": 25,
      "code": "G",
      "ref": "Z1 · G",
      "type": "Distance au sol",
@@ -515,7 +530,7 @@
     {
      "id": "mwvzx1f88qw95v",
      "genre": "cote",
-     "rang": 25,
+     "rang": 26,
      "code": "E",
      "ref": "Z1 · E",
      "type": "Épaisseur",
@@ -533,7 +548,7 @@
     {
      "id": "mwvzxnlnjbiue8",
      "genre": "photo",
-     "rang": 26,
+     "rang": 27,
      "code": "Photo 1",
      "ref": "Z1 · Photo 1",
      "numero": 1,
@@ -548,7 +563,7 @@
     {
      "id": "mwvzxpfj4ablvy",
      "genre": "photo",
-     "rang": 27,
+     "rang": 28,
      "code": "Photo 2",
      "ref": "Z1 · Photo 2",
      "numero": 2,
@@ -563,7 +578,7 @@
     {
      "id": "mwvzxr9f703rqn",
      "genre": "photo",
-     "rang": 28,
+     "rang": 29,
      "code": "Photo 3",
      "ref": "Z1 · Photo 3",
      "numero": 3,
@@ -1127,9 +1142,24 @@
      "totemSchema": true
     },
     {
+     "id": "tv-mwyl4kxmlctsvp",
+     "genre": "question",
+     "rang": 12,
+     "code": "TV",
+     "ref": "Z3 · TV",
+     "numero": 12,
+     "libelle": "Totem : ce dessin ressemble-t-il au totem ?",
+     "attendu": "choix",
+     "choix": [
+      "Oui, c’est bien ça",
+      "Non, je passe en mode photo"
+     ],
+     "totemOk": true
+    },
+    {
      "id": "tc-mwyl4kxmlctsvp-A",
      "genre": "cote",
-     "rang": 12,
+     "rang": 13,
      "code": "TA",
      "ref": "Z3 · TA",
      "type": "Totem",
@@ -1141,7 +1171,7 @@
     {
      "id": "tc-mwyl4kxmlctsvp-B",
      "genre": "cote",
-     "rang": 13,
+     "rang": 14,
      "code": "TB",
      "ref": "Z3 · TB",
      "type": "Totem",
@@ -1153,7 +1183,7 @@
     {
      "id": "tc-mwyl4kxmlctsvp-C",
      "genre": "cote",
-     "rang": 14,
+     "rang": 15,
      "code": "TC",
      "ref": "Z3 · TC",
      "type": "Totem",
@@ -1165,7 +1195,7 @@
     {
      "id": "tc-mwyl4kxmlctsvp-D",
      "genre": "cote",
-     "rang": 15,
+     "rang": 16,
      "code": "TD",
      "ref": "Z3 · TD",
      "type": "Totem",
@@ -1177,7 +1207,7 @@
     {
      "id": "tc-mwyl4kxmlctsvp-E",
      "genre": "cote",
-     "rang": 16,
+     "rang": 17,
      "code": "TE",
      "ref": "Z3 · TE",
      "type": "Totem",
@@ -1189,7 +1219,7 @@
     {
      "id": "tc-mwyl4kxmlctsvp-F",
      "genre": "cote",
-     "rang": 17,
+     "rang": 18,
      "code": "TF",
      "ref": "Z3 · TF",
      "type": "Totem",
@@ -1201,7 +1231,7 @@
     {
      "id": "tc-mwyl4kxmlctsvp-G",
      "genre": "cote",
-     "rang": 18,
+     "rang": 19,
      "code": "TG",
      "ref": "Z3 · TG",
      "type": "Totem",
@@ -1213,7 +1243,7 @@
     {
      "id": "tc-mwyl4kxmlctsvp-H",
      "genre": "cote",
-     "rang": 19,
+     "rang": 20,
      "code": "TH",
      "ref": "Z3 · TH",
      "type": "Totem",
@@ -1225,7 +1255,7 @@
     {
      "id": "mww0078dhvtzgi",
      "genre": "cote",
-     "rang": 20,
+     "rang": 21,
      "code": "L",
      "ref": "Z3 · L",
      "type": "Largeur",
@@ -1243,7 +1273,7 @@
     {
      "id": "mww004gwww20kh",
      "genre": "cote",
-     "rang": 21,
+     "rang": 22,
      "code": "H",
      "ref": "Z3 · H",
      "type": "Hauteur",
@@ -1261,7 +1291,7 @@
     {
      "id": "mww00hcykv212f",
      "genre": "cote",
-     "rang": 22,
+     "rang": 23,
      "code": "E1",
      "ref": "Z3 · E1",
      "type": "Épaisseur",
@@ -1279,7 +1309,7 @@
     {
      "id": "mww046e0uo7s8l",
      "genre": "cote",
-     "rang": 23,
+     "rang": 24,
      "code": "E2",
      "ref": "Z3 · E2",
      "type": "Épaisseur",
@@ -1297,7 +1327,7 @@
     {
      "id": "mww04a3u5ud7t0",
      "genre": "cote",
-     "rang": 24,
+     "rang": 25,
      "code": "E3",
      "ref": "Z3 · E3",
      "type": "Épaisseur",
@@ -1315,7 +1345,7 @@
     {
      "id": "mww00oahbxtxgr",
      "genre": "question",
-     "rang": 25,
+     "rang": 26,
      "code": "Q2",
      "ref": "Z3 · Q2",
      "numero": 2,
@@ -1671,9 +1701,24 @@
      "totemSchema": true
     },
     {
+     "id": "tv-mwyl501e2h8c37",
+     "genre": "question",
+     "rang": 12,
+     "code": "TV",
+     "ref": "Z5 · TV",
+     "numero": 12,
+     "libelle": "Totem : ce dessin ressemble-t-il au totem ?",
+     "attendu": "choix",
+     "choix": [
+      "Oui, c’est bien ça",
+      "Non, je passe en mode photo"
+     ],
+     "totemOk": true
+    },
+    {
      "id": "tc-mwyl501e2h8c37-A",
      "genre": "cote",
-     "rang": 12,
+     "rang": 13,
      "code": "TA",
      "ref": "Z5 · TA",
      "type": "Totem",
@@ -1685,7 +1730,7 @@
     {
      "id": "tc-mwyl501e2h8c37-B",
      "genre": "cote",
-     "rang": 13,
+     "rang": 14,
      "code": "TB",
      "ref": "Z5 · TB",
      "type": "Totem",
@@ -1697,7 +1742,7 @@
     {
      "id": "tc-mwyl501e2h8c37-C",
      "genre": "cote",
-     "rang": 14,
+     "rang": 15,
      "code": "TC",
      "ref": "Z5 · TC",
      "type": "Totem",
@@ -1709,7 +1754,7 @@
     {
      "id": "tc-mwyl501e2h8c37-D",
      "genre": "cote",
-     "rang": 15,
+     "rang": 16,
      "code": "TD",
      "ref": "Z5 · TD",
      "type": "Totem",
@@ -1721,7 +1766,7 @@
     {
      "id": "tc-mwyl501e2h8c37-E",
      "genre": "cote",
-     "rang": 16,
+     "rang": 17,
      "code": "TE",
      "ref": "Z5 · TE",
      "type": "Totem",
@@ -1733,7 +1778,7 @@
     {
      "id": "tc-mwyl501e2h8c37-F",
      "genre": "cote",
-     "rang": 17,
+     "rang": 18,
      "code": "TF",
      "ref": "Z5 · TF",
      "type": "Totem",
@@ -1745,7 +1790,7 @@
     {
      "id": "tc-mwyl501e2h8c37-G",
      "genre": "cote",
-     "rang": 18,
+     "rang": 19,
      "code": "TG",
      "ref": "Z5 · TG",
      "type": "Totem",
@@ -1757,7 +1802,7 @@
     {
      "id": "tc-mwyl501e2h8c37-H",
      "genre": "cote",
-     "rang": 19,
+     "rang": 20,
      "code": "TH",
      "ref": "Z5 · TH",
      "type": "Totem",
@@ -1769,7 +1814,7 @@
     {
      "id": "mww07dgtt3y1pb",
      "genre": "cote",
-     "rang": 20,
+     "rang": 21,
      "code": "G1",
      "ref": "Z5 · G1",
      "type": "Distance au sol",
@@ -1787,7 +1832,7 @@
     {
      "id": "mww07h9dd5xlzd",
      "genre": "cote",
-     "rang": 21,
+     "rang": 22,
      "code": "G2",
      "ref": "Z5 · G2",
      "type": "Distance au sol",
@@ -1805,7 +1850,7 @@
     {
      "id": "mww07kjt0f0f7q",
      "genre": "cote",
-     "rang": 22,
+     "rang": 23,
      "code": "G3",
      "ref": "Z5 · G3",
      "type": "Distance au sol",
@@ -1823,7 +1868,7 @@
     {
      "id": "mww07ouzk3tmgh",
      "genre": "cote",
-     "rang": 23,
+     "rang": 24,
      "code": "G4",
      "ref": "Z5 · G4",
      "type": "Distance au sol",
@@ -1841,7 +1886,7 @@
     {
      "id": "mww07ty57v9tua",
      "genre": "photo",
-     "rang": 24,
+     "rang": 25,
      "code": "Photo 7",
      "ref": "Z5 · Photo 7",
      "numero": 7,
@@ -1856,7 +1901,7 @@
     {
      "id": "mww07vaea7cq3e",
      "genre": "photo",
-     "rang": 25,
+     "rang": 26,
      "code": "Photo 8",
      "ref": "Z5 · Photo 8",
      "numero": 8,
@@ -1871,7 +1916,7 @@
     {
      "id": "mww07xq470hpt3",
      "genre": "question",
-     "rang": 26,
+     "rang": 27,
      "code": "Q5",
      "ref": "Z5 · Q5",
      "numero": 5,
